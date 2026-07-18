@@ -1,0 +1,16 @@
+INSERT INTO public."usuarios" (
+	"rut",
+	"nombre",
+	"email",
+	"telefono",
+	"nucleo_id",
+	"rol_id",
+	"fecha_ingreso")
+VALUES (
+	'{{insert_form.formData.rut}}',
+	'{{insert_form.formData.nombre}}',
+	'{{insert_form.formData.email}}',
+	'{{insert_form.formData.telefono}}',
+	'{{insert_form.formData.nucleo_id}}',
+	'{{insert_form.formData.rol_id}}',
+	'{{insert_form.formData.fecha_ingreso}}');

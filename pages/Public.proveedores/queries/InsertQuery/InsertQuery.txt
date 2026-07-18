@@ -1,0 +1,12 @@
+INSERT INTO public."proveedores" (
+	"nombre",
+	"contacto",
+	"email",
+	"telefono",
+	"cuenta_bancaria")
+VALUES (
+	'{{insert_form.formData.nombre}}',
+	'{{insert_form.formData.contacto}}',
+	'{{insert_form.formData.email}}',
+	'{{insert_form.formData.telefono}}',
+	'{{insert_form.formData.cuenta_bancaria}}');

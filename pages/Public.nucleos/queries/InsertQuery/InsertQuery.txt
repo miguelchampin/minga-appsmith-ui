@@ -1,0 +1,4 @@
+INSERT INTO public."nucleos" (
+	"nombre")
+VALUES (
+	'{{insert_form.formData.nombre}}');

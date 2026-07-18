@@ -1,0 +1,4 @@
+UPDATE public."roles" SET
+		"nombre" = '{{update_form.fieldState.nombre.isVisible ? update_form.formData.nombre : update_form.sourceData.nombre}}',
+		"descripcion" = '{{update_form.fieldState.descripcion.isVisible ? update_form.formData.descripcion : update_form.sourceData.descripcion}}'
+WHERE "id" = {{data_table.selectedRow.id}};

@@ -1,0 +1,1 @@
+SELECT id as value, nombre as label FROM public.proveedores;

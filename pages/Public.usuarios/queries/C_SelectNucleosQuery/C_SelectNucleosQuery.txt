@@ -1,0 +1,1 @@
+SELECT id as VALUE, nombre as LABEL FROM nucleos;

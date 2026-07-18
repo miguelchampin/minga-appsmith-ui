@@ -1,0 +1,3 @@
+UPDATE public."nucleos" SET
+		"nombre" = '{{update_form.fieldState.nombre.isVisible ? update_form.formData.nombre : update_form.sourceData.nombre}}'
+WHERE "id" = {{data_table.selectedRow.id}};

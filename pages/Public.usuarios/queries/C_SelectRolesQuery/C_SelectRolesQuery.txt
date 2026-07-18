@@ -1,0 +1,2 @@
+SELECT id as VALUE, REPLACE(nombre,'_',' ') as LABEL 
+FROM roles;

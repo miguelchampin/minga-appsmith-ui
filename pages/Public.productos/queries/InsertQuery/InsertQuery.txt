@@ -1,0 +1,26 @@
+INSERT INTO public."productos" (
+	"nombre",
+	"proveedor_id",
+	"descripcion",
+	"clase",
+	"unidad_medida",
+	"url_imagen",
+	"stock_excedente_bodega",
+	"embedding",
+	"es_organico",
+	"es_local",
+	"es_pequena_produccion"
+)
+VALUES (
+	'{{insert_form.formData.nombre}}',
+	'{{insert_form.formData.proveedor_id}}',
+	'{{insert_form.formData.descripcion}}',
+	'{{insert_form.formData.clase}}',
+	'{{insert_form.formData.unidad_medida}}',
+	'{{insert_form.formData.url_imagen}}',
+	'{{insert_form.formData.stock_excedente_bodega}}',
+	'{{insert_form.formData.embedding}}',
+	'{{insert_form.formData.es_organico}}',
+	'{{insert_form.formData.es_local}}',
+	'{{insert_form.formData.es_pequena_produccion}}'
+);

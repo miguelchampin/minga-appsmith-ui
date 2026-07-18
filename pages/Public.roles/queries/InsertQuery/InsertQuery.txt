@@ -1,0 +1,6 @@
+INSERT INTO public."roles" (
+	"nombre",
+	"descripcion")
+VALUES (
+	'{{insert_form.formData.nombre}}',
+	'{{insert_form.formData.descripcion}}');

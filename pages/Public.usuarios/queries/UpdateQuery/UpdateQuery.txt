@@ -1,0 +1,9 @@
+UPDATE public."usuarios" SET
+		"rut" = '{{update_form.fieldState.rut.isVisible ? update_form.formData.rut : update_form.sourceData.rut}}',
+		"nombre" = '{{update_form.fieldState.nombre.isVisible ? update_form.formData.nombre : update_form.sourceData.nombre}}',
+    "email" = '{{update_form.fieldState.email.isVisible ? update_form.formData.email : update_form.sourceData.email}}',
+		"telefono" = '{{update_form.fieldState.telefono.isVisible ? update_form.formData.telefono : update_form.sourceData.telefono}}',
+		"nucleo_id" = '{{update_form.fieldState.nucleo_id.isVisible ? update_form.formData.nucleo_id : update_form.sourceData.nucleo_id}}',
+		"rol_id" = '{{update_form.fieldState.rol_id.isVisible ? update_form.formData.rol_id : update_form.sourceData.rol_id}}',
+		"fecha_ingreso" = '{{update_form.fieldState.fecha_ingreso.isVisible ? update_form.formData.fecha_ingreso : update_form.sourceData.fecha_ingreso}}'
+WHERE "id" = {{data_table.selectedRow.id}};
