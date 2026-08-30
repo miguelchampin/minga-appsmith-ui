@@ -1,0 +1,12 @@
+SELECT 
+    p.id as producto_id,
+    pc.id as producto_ciclo_id,
+    p.nombre,
+    p.url_imagen,
+    pc.precio_ciclo,
+    p.es_organico,
+    p.es_local
+FROM producto_ciclo pc
+JOIN productos p ON pc.producto_id = p.id
+JOIN ciclos_compra c ON pc.ciclo_id = c.id
+WHERE c.estado = 'Abierto';

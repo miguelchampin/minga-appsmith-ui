@@ -32,6 +32,10 @@
     {
       "id": "Public.ciclos_compra",
       "isDefault": false
+    },
+    {
+      "id": "Vitrina",
+      "isDefault": false
     }
   ]
 }

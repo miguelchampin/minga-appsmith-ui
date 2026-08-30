@@ -20,15 +20,15 @@
   "isLoading": false,
   "isVisible": "true",
   "labelTextSize": "0.875rem",
-  "leftColumn": 34,
+  "leftColumn": 33,
   "onClick": "{{closeModal('Delete_Modal')}}",
   "parentId": "zi8fjakv8o",
   "recaptchaType": "V3",
   "rightColumn": 46,
-  "text": "Cancel",
+  "text": "Cancelar",
   "topRow": 17,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "lryg8kw537",
-  "widgetName": "Button1"
+  "widgetName": "Cancel_Button"
 }
