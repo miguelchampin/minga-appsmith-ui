@@ -6,7 +6,6 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
   "bottomRow": 86,
-  "bottomRowBeforeCollapse": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -132,6 +131,33 @@
     },
     {
       "key": "schema.__root_schema__.children.nombre.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.fecha_apertura.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.fecha_apertura.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.fecha_apertura.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.fecha_cierre.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.fecha_cierre.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.fecha_cierre.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.estado.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.estado.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.estado.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -166,8 +192,6 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 86,
-  "originalTopRow": 0,
   "parentColumnSpace": 16.3125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -188,6 +212,72 @@
       "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
       "cellBoxShadow": "none",
       "children": {
+        "estado": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "estado",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.estado))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "estado",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Estado",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "estado",
+          "position": 3,
+          "sourceData": "Finalizado"
+        },
+        "fecha_apertura": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "fecha_apertura",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.fecha_apertura))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "fecha_apertura",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Fecha Apertura",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "fecha_apertura",
+          "position": 1,
+          "sourceData": "2023-07-01T00:00:00Z"
+        },
+        "fecha_cierre": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "fecha_cierre",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.fecha_cierre))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "fecha_cierre",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Fecha Cierre",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "fecha_cierre",
+          "position": 2,
+          "sourceData": "2023-07-03T23:59:59Z"
+        },
         "nombre": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "nombre",
@@ -208,7 +298,7 @@
           "labelTextSize": "0.875rem",
           "originalIdentifier": "nombre",
           "position": 0,
-          "sourceData": "Zonal B"
+          "sourceData": "Compra Julio 2023"
         }
       },
       "dataType": "object",
@@ -243,7 +333,6 @@
   },
   "title": "Update Row id: {{data_table.selectedRow.id}}",
   "topRow": 0,
-  "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",
   "version": 1,
   "widgetId": "y5cjzuxnb3",

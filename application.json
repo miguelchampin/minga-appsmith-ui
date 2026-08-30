@@ -24,6 +24,14 @@
     {
       "id": "Public.roles",
       "isDefault": false
+    },
+    {
+      "id": "Page1",
+      "isDefault": false
+    },
+    {
+      "id": "Public.ciclos_compra",
+      "isDefault": false
     }
   ]
 }

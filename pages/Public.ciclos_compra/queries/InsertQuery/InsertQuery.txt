@@ -1,0 +1,10 @@
+INSERT INTO public."ciclos_compra" (
+	"nombre",
+	"fecha_apertura",
+	"fecha_cierre",
+	"estado")
+VALUES (
+	'{{insert_form.formData.nombre}}',
+	'{{insert_form.formData.fecha_apertura}}',
+	'{{insert_form.formData.fecha_cierre}}',
+	'{{insert_form.formData.estado}}');

@@ -1,0 +1,6 @@
+UPDATE public."ciclos_compra" SET
+		"nombre" = '{{update_form.fieldState.nombre.isVisible ? update_form.formData.nombre : update_form.sourceData.nombre}}',
+		"fecha_apertura" = '{{update_form.fieldState.fecha_apertura.isVisible ? update_form.formData.fecha_apertura : update_form.sourceData.fecha_apertura}}',
+    "fecha_cierre" = '{{update_form.fieldState.fecha_cierre.isVisible ? update_form.formData.fecha_cierre : update_form.sourceData.fecha_cierre}}',
+		"estado" = '{{update_form.fieldState.estado.isVisible ? update_form.formData.estado : update_form.sourceData.estado}}'
+WHERE "id" = {{data_table.selectedRow.id}};
