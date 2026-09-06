@@ -1,0 +1,7 @@
+INSERT INTO pedidos (producto_ciclo_id, nombre_producto_historico, precio_unitario_cobrado, cantidad_pedida)
+VALUES (
+  {{List1.triggeredItem.producto_ciclo_id}}, 
+	{{List1.triggeredItem.nombre}}, 
+	{{List1.triggeredItem.precio_ciclo}}, 
+  1
+);
