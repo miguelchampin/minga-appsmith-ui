@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"productos\" (\n\t\"nombre\",\n\t\"proveedor_id\",\n\t\"descripcion\",\n\t\"clase\",\n\t\"unidad_medida\",\n\t\"url_imagen\",\n\t\"embedding\",\n\t\"es_organico\",\n\t\"es_local\",\n\t\"es_pequena_produccion\"\n)\nVALUES (\n\t'{{insert_form.formData.nombre}}',\n\t'{{insert_form.formData.proveedor_id}}',\n\t'{{insert_form.formData.descripcion}}',\n\t'{{insert_form.formData.clase}}',\n\t'{{insert_form.formData.unidad_medida}}',\n\t'{{insert_form.formData.url_imagen}}',\n\t'{{insert_form.formData.embedding}}',\n\t'{{insert_form.formData.es_organico}}',\n\t'{{insert_form.formData.es_local}}',\n\t'{{insert_form.formData.es_pequena_produccion}}'\n);",
+      "body": "INSERT INTO public.\"productos\" (\n\t\"nombre\",\n\t\"proveedor_id\",\n\t\"descripcion\",\n\t\"clase\",\n\t\"unidad_medida\",\n\t\"url_imagen\",\n\t\"embedding\",\n\t\"es_organico\",\n\t\"es_local\",\n\t\"es_pequena_produccion\",\n\t\"es_mas_barato\",\n\t\"es_vegano\",\n\t\"es_sin_gluten\"\n)\nVALUES (\n\t'{{insert_form.formData.nombre}}',\n\t'{{insert_form.formData.proveedor_id}}',\n\t'{{insert_form.formData.descripcion}}',\n\t'{{insert_form.formData.clase}}',\n\t'{{insert_form.formData.unidad_medida}}',\n\t'{{insert_form.formData.url_imagen}}',\n\t'{{insert_form.formData.embedding}}',\n\t'{{insert_form.formData.es_organico}}',\n\t'{{insert_form.formData.es_local}}',\n\t'{{insert_form.formData.es_pequena_produccion}}',\n\t'{{insert_form.formData.es_mas_barato}}',\n\t'{{insert_form.formData.es_vegano}}',\n\t'{{insert_form.formData.es_sin_gluten}}'\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

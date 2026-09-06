@@ -8,7 +8,10 @@ INSERT INTO public."productos" (
 	"embedding",
 	"es_organico",
 	"es_local",
-	"es_pequena_produccion"
+	"es_pequena_produccion",
+	"es_mas_barato",
+	"es_vegano",
+	"es_sin_gluten"
 )
 VALUES (
 	'{{insert_form.formData.nombre}}',
@@ -20,5 +23,8 @@ VALUES (
 	'{{insert_form.formData.embedding}}',
 	'{{insert_form.formData.es_organico}}',
 	'{{insert_form.formData.es_local}}',
-	'{{insert_form.formData.es_pequena_produccion}}'
+	'{{insert_form.formData.es_pequena_produccion}}',
+	'{{insert_form.formData.es_mas_barato}}',
+	'{{insert_form.formData.es_vegano}}',
+	'{{insert_form.formData.es_sin_gluten}}'
 );
