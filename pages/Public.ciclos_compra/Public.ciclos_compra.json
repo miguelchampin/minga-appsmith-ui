@@ -1,6 +1,7 @@
 {
   "gitSyncId": "6a89d2d2381db089d174062f_c5ffa19e-a8e1-4c1e-8977-6955eff0f1fa",
   "unpublishedPage": {
+    "isHidden": false,
     "layouts": [
       {
         "dsl": {
@@ -26,7 +27,7 @@
         }
       }
     ],
-    "name": "Public.ciclos_compra2",
-    "slug": "public-ciclos-compra2"
+    "name": "Public.ciclos_compra",
+    "slug": "public-ciclos-compra"
   }
 }

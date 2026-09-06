@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a89d2d2381db089d174062f_16a0d63b-38e3-4ea1-91fc-7cb27ebb3edc",
-  "id": "Public.ciclos_compra2_DeleteQuery",
+  "id": "Public.ciclos_compra_DeleteQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "DeleteQuery",
-    "pageId": "Public.ciclos_compra2",
+    "pageId": "Public.ciclos_compra",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

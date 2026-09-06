@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a89d2d2381db089d174062f_2251f586-e320-480c-a012-16f78b308833",
-  "id": "Public.ciclos_compra2_SelectQuery",
+  "id": "Public.ciclos_compra_SelectQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "SelectQuery",
-    "pageId": "Public.ciclos_compra2",
+    "pageId": "Public.ciclos_compra",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": true
   }

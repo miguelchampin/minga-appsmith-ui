@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a89d2d2381db089d174062f_96ac2968-4fd0-4855-a809-a555a4ffa192",
-  "id": "Public.ciclos_compra2_UpdateQuery",
+  "id": "Public.ciclos_compra_UpdateQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "UpdateQuery",
-    "pageId": "Public.ciclos_compra2",
+    "pageId": "Public.ciclos_compra",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

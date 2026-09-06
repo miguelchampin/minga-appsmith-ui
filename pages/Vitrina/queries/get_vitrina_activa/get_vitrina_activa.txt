@@ -1,11 +1,18 @@
 SELECT 
-    p.id as producto_id,
-    pc.id as producto_ciclo_id,
-    p.nombre,
-    p.url_imagen,
-    pc.precio_ciclo,
-    p.es_organico,
-    p.es_local
+    p.id as producto_id
+    ,pc.id as producto_ciclo_id
+    ,p.nombre
+		,p.descripcion
+		,p.clase
+		,p.unidad_medida
+    ,p.url_imagen
+    ,pc.precio_ciclo
+    ,p.es_organico
+    ,p.es_local
+		,p.es_pequena_produccion
+		,p.es_mas_barato
+		,p.es_vegano
+		,p.es_sin_gluten
 FROM producto_ciclo pc
 JOIN productos p ON pc.producto_id = p.id
 JOIN ciclos_compra c ON pc.ciclo_id = c.id

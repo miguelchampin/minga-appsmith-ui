@@ -1,6 +1,6 @@
 {
   "gitSyncId": "6a89d2d2381db089d174062f_ef613b98-efee-41d6-9e67-59262b445d9c",
-  "id": "Public.ciclos_compra2_InsertQuery",
+  "id": "Public.ciclos_compra_InsertQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -28,7 +28,7 @@
       }
     ],
     "name": "InsertQuery",
-    "pageId": "Public.ciclos_compra2",
+    "pageId": "Public.ciclos_compra",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

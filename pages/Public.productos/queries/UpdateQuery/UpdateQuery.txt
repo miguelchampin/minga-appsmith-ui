@@ -8,5 +8,8 @@ UPDATE public."productos" SET
 		"embedding" = '{{update_form.fieldState.embedding.isVisible ? update_form.formData.embedding : update_form.sourceData.embedding}}',
 		"es_organico" = '{{update_form.fieldState.es_organico.isVisible ? update_form.formData.es_organico : update_form.sourceData.es_organico}}',
 		"es_local" = '{{update_form.fieldState.es_local.isVisible ? update_form.formData.es_local : update_form.sourceData.es_local}}',
-		"es_pequena_produccion" = '{{update_form.fieldState.es_pequena_produccion.isVisible ? update_form.formData.es_pequena_produccion : update_form.sourceData.es_pequena_produccion}}'
+		"es_pequena_produccion" = '{{update_form.fieldState.es_pequena_produccion.isVisible ? update_form.formData.es_pequena_produccion : update_form.sourceData.es_pequena_produccion}}',
+		"es_mas_barato" = '{{update_form.fieldState.es_mas_barato.isVisible ? update_form.formData.es_mas_barato : update_form.sourceData.es_mas_barato}}',
+    "es_vegano" = '{{update_form.fieldState.es_vegano.isVisible ? update_form.formData.es_vegano : update_form.sourceData.es_vegano}}',
+    "es_sin_gluten" = '{{update_form.fieldState.es_sin_gluten.isVisible ? update_form.formData.es_sin_gluten : update_form.sourceData.es_sin_gluten}}'
 	WHERE "id" = {{data_table.selectedRow.id}};
