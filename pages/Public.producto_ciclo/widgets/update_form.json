@@ -238,6 +238,9 @@
     },
     {
       "key": "schema.__root_schema__.children.proveedor_nombre.onOptionChange"
+    },
+    {
+      "key": "schema.__root_schema__.children.proveedor_id.onOptionChange"
     }
   ],
   "fieldLimitExceeded": false,
@@ -293,7 +296,7 @@
           "labelTextSize": "0.875rem",
           "options": "{{C_selectCicloQuery.data}}",
           "originalIdentifier": "ciclo_id",
-          "position": 2,
+          "position": 0,
           "serverSideFiltering": false,
           "sourceData": 3
         },
@@ -316,7 +319,7 @@
           "label": "Ciclo",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "ciclo_nombre",
-          "position": 0,
+          "position": 6,
           "sourceData": ""
         },
         "excedentes_disponibles_ciclo": {
@@ -338,7 +341,7 @@
           "label": "Excedentes Disponibles Ciclo",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "excedentes_disponibles_ciclo",
-          "position": 8,
+          "position": 5,
           "sourceData": 0
         },
         "precio_ciclo": {
@@ -360,7 +363,7 @@
           "label": "Precio Ciclo",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "precio_ciclo",
-          "position": 6,
+          "position": 3,
           "sourceData": 1000
         },
         "producto_id": {
@@ -382,7 +385,7 @@
           "labelTextSize": "0.875rem",
           "options": "{{C_get_Productos_por_Proveedor.data}}",
           "originalIdentifier": "producto_id",
-          "position": 5,
+          "position": 2,
           "serverSideFiltering": false,
           "sourceData": 1
         },
@@ -405,7 +408,7 @@
           "label": "Producto",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "producto_nombre",
-          "position": 1,
+          "position": 8,
           "sourceData": "producto1proveedor1"
         },
         "proveedor_id": {
@@ -425,9 +428,10 @@
           "isVisible": true,
           "label": "Proveedor",
           "labelTextSize": "0.875rem",
+          "onOptionChange": "{{C_get_Productos_por_Proveedor.run()}}",
           "options": "{{C_selectProveedorQuery.data}}",
           "originalIdentifier": "proveedor_id",
-          "position": 4,
+          "position": 1,
           "serverSideFiltering": false,
           "sourceData": 1
         },
@@ -448,10 +452,10 @@
           "isVisible": false,
           "label": "Proveedor",
           "labelTextSize": "0.875rem",
-          "onOptionChange": "{{C_get_Productos_por_Proveedor.run()}}",
+          "onOptionChange": "",
           "options": "{{C_selectProveedorQuery.data}}",
           "originalIdentifier": "proveedor_nombre",
-          "position": 3,
+          "position": 7,
           "serverSideFiltering": false,
           "sourceData": "proveedor1"
         },
@@ -474,7 +478,7 @@
           "label": "Stock Proveedor",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "stock_proveedor",
-          "position": 7,
+          "position": 4,
           "sourceData": 500
         }
       },
