@@ -1,5 +1,4 @@
 INSERT INTO public."producto_ciclo" (
-
 	"ciclo_id",
 	"proveedor_id",
 	"producto_id",

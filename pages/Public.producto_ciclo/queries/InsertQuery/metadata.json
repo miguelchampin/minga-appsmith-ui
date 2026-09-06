@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"producto_ciclo\" (\n\n\t\"ciclo_id\",\n\t\"proveedor_id\",\n\t\"producto_id\",\n\t\"precio_ciclo\",\n\t\"stock_proveedor\",\n\t\"excedentes_disponibles_ciclo\")\nVALUES (\n\n\t'{{insert_form.formData.ciclo_id}}',\n\t'{{insert_form.formData.proveedor_id}}',\n\t'{{insert_form.formData.producto_id}}',\n\t'{{insert_form.formData.precio_ciclo}}',\n\t'{{insert_form.formData.stock_proveedor}}',\n\t'{{insert_form.formData.excedentes_disponibles_ciclo}}');",
+      "body": "INSERT INTO public.\"producto_ciclo\" (\n\t\"ciclo_id\",\n\t\"proveedor_id\",\n\t\"producto_id\",\n\t\"precio_ciclo\",\n\t\"stock_proveedor\",\n\t\"excedentes_disponibles_ciclo\")\nVALUES (\n\n\t'{{insert_form.formData.ciclo_id}}',\n\t'{{insert_form.formData.proveedor_id}}',\n\t'{{insert_form.formData.producto_id}}',\n\t'{{insert_form.formData.precio_ciclo}}',\n\t'{{insert_form.formData.stock_proveedor}}',\n\t'{{insert_form.formData.excedentes_disponibles_ciclo}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

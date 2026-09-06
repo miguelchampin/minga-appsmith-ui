@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 70,
+  "bottomRow": 63,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -209,6 +209,12 @@
     },
     {
       "key": "schema.__root_schema__.children.proveedor_nombre.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.proveedor_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.producto_id.options"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -229,6 +235,9 @@
   "dynamicTriggerPathList": [
     {
       "key": "onSubmit"
+    },
+    {
+      "key": "schema.__root_schema__.children.proveedor_nombre.onOptionChange"
     }
   ],
   "fieldLimitExceeded": false,
@@ -362,18 +371,19 @@
           "children": {},
           "dataType": "number",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.producto_id))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
+          "fieldType": "Select",
           "identifier": "producto_id",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
           "label": "Producto",
           "labelTextSize": "0.875rem",
+          "options": "{{C_get_Productos_por_Proveedor.data}}",
           "originalIdentifier": "producto_id",
           "position": 5,
+          "serverSideFiltering": false,
           "sourceData": 1
         },
         "producto_nombre": {
@@ -406,18 +416,19 @@
           "children": {},
           "dataType": "number",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.proveedor_id))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
+          "fieldType": "Select",
           "identifier": "proveedor_id",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
           "label": "Proveedor",
           "labelTextSize": "0.875rem",
+          "options": "{{C_selectProveedorQuery.data}}",
           "originalIdentifier": "proveedor_id",
           "position": 4,
+          "serverSideFiltering": false,
           "sourceData": 1
         },
         "proveedor_nombre": {
@@ -434,9 +445,10 @@
           "isDisabled": false,
           "isFilterable": false,
           "isRequired": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Proveedor",
           "labelTextSize": "0.875rem",
+          "onOptionChange": "{{C_get_Productos_por_Proveedor.run()}}",
           "options": "{{C_selectProveedorQuery.data}}",
           "originalIdentifier": "proveedor_nombre",
           "position": 3,
