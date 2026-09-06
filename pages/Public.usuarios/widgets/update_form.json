@@ -125,15 +125,6 @@
       "key": "submitButtonStyles.buttonColor"
     },
     {
-      "key": "schema.__root_schema__.children.rut.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.rut.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.rut.accentColor"
-    },
-    {
       "key": "schema.__root_schema__.children.nombre.defaultValue"
     },
     {
@@ -161,21 +152,6 @@
       "key": "schema.__root_schema__.children.telefono.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.nucleo_id.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.nucleo_id.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.nucleo_id.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.rol_id.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.rol_id.accentColor"
-    },
-    {
       "key": "schema.__root_schema__.children.fecha_ingreso.defaultValue"
     },
     {
@@ -185,13 +161,55 @@
       "key": "schema.__root_schema__.children.fecha_ingreso.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.nucleo_id.options"
+      "key": "schema.__root_schema__.children.estado.defaultValue"
     },
     {
-      "key": "schema.__root_schema__.children.rol_id.options"
+      "key": "schema.__root_schema__.children.estado.borderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.rol_id.defaultValue"
+      "key": "schema.__root_schema__.children.estado.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_nucleo.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_nucleo.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_nucleo.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_rol.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_rol.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_nucleo.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_rol.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_nucloe.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_nucloe.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_nucloe.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_rol.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_rol.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_rol.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_rol.defaultValue"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -273,6 +291,28 @@
           "position": 2,
           "sourceData": "usuario1@minga.cl"
         },
+        "estado": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "estado",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.estado))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "estado",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Estado",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "estado",
+          "position": 7,
+          "sourceData": "Activo"
+        },
         "fecha_ingreso": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "fecha_ingreso",
@@ -300,6 +340,50 @@
           "sourceData": "2026-07-06",
           "timePrecision": "minute"
         },
+        "id_nucloe": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "id_nucloe",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.id_nucloe))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "id_nucloe",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Id Nucloe",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "id_nucloe",
+          "position": 7,
+          "sourceData": 1
+        },
+        "id_rol": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "id_rol",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "number",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.id_rol))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Number Input",
+          "iconAlign": "left",
+          "identifier": "id_rol",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Id Rol",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "id_rol",
+          "position": 8,
+          "sourceData": 1
+        },
         "nombre": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "accessor": "nombre",
@@ -322,73 +406,51 @@
           "position": 1,
           "sourceData": "usuario1"
         },
-        "nucleo_id": {
+        "nombre_nucleo": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "accessor": "nucleo_id",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nucleo_id))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Select",
-          "identifier": "nucleo_id",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isFilterable": false,
-          "isRequired": false,
-          "isVisible": true,
-          "label": "Nucleo",
-          "labelTextSize": "0.875rem",
-          "options": "{{C_SelectNucleosQuery.data}}",
-          "originalIdentifier": "nucleo_id",
-          "position": 4,
-          "serverSideFiltering": false,
-          "sourceData": 2
-        },
-        "rol_id": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "accessor": "rol_id",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.rol_id))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Select",
-          "identifier": "rol_id",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isFilterable": false,
-          "isRequired": false,
-          "isVisible": true,
-          "label": "Rol",
-          "labelTextSize": "0.875rem",
-          "options": "{{C_SelectRolesQuery.data}}",
-          "originalIdentifier": "rol_id",
-          "position": 5,
-          "serverSideFiltering": false,
-          "sourceData": 1
-        },
-        "rut": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "accessor": "rut",
+          "accessor": "nombre_nucleo",
           "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.rut))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
-          "identifier": "rut",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nombre_nucleo))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "nombre_nucleo",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
-          "label": "Rut",
+          "label": "Nombre Nucleo",
           "labelTextSize": "0.875rem",
-          "originalIdentifier": "rut",
-          "position": 0,
-          "sourceData": "10000001-K"
+          "options": "{{C_SelectNucleosQuery.data}}",
+          "originalIdentifier": "nombre_nucleo",
+          "position": 5,
+          "serverSideFiltering": false,
+          "sourceData": "Zonal B"
+        },
+        "nombre_rol": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "nombre_rol",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (SelectQuery.data.id_rol))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Select",
+          "identifier": "nombre_rol",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isFilterable": false,
+          "isRequired": false,
+          "isVisible": true,
+          "label": "Nombre Rol",
+          "labelTextSize": "0.875rem",
+          "options": "{{C_SelectRolesQuery.data}}",
+          "originalIdentifier": "nombre_rol",
+          "position": 6,
+          "serverSideFiltering": false,
+          "sourceData": "Socio"
         },
         "telefono": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",

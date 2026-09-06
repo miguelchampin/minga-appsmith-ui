@@ -1,0 +1,2 @@
+DELETE FROM public."producto_ciclo"
+  WHERE "id" = {{data_table.triggeredRow.id}};

@@ -1,4 +1,22 @@
-SELECT * FROM public."usuarios"
+SELECT SCS.id
+,SCS.nombre
+,SCS.email
+,SCS.telefono
+,NCL.id as id_nucloe
+,NCL.nombre as nombre_nucleo
+,RLS.id as id_rol
+,RLS.nombre as nombre_rol
+,SCS.fecha_ingreso
+,SCS.estado
+
+FROM public."socios" SCS
+
+LEFT JOIN public.nucleos NCL
+ON SCS.nucleo_id = NCL.id
+
+LEFT JOIN public.roles RLS
+ON SCS.rol_id = RLS.id
+
 WHERE "rut" ilike '%{{data_table.searchText || ""}}%'
 ORDER BY "{{data_table.sortOrder.column || 'id'}}" {{data_table.sortOrder.order || 'ASC'}}
 LIMIT {{data_table.pageSize}}

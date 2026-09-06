@@ -1,0 +1,16 @@
+INSERT INTO public."producto_ciclo" (
+
+	"ciclo_id",
+	"proveedor_id",
+	"producto_id",
+	"precio_ciclo",
+	"stock_proveedor",
+	"excedentes_disponibles_ciclo")
+VALUES (
+
+	'{{insert_form.formData.ciclo_id}}',
+	'{{insert_form.formData.proveedor_id}}',
+	'{{insert_form.formData.producto_id}}',
+	'{{insert_form.formData.precio_ciclo}}',
+	'{{insert_form.formData.stock_proveedor}}',
+	'{{insert_form.formData.excedentes_disponibles_ciclo}}');

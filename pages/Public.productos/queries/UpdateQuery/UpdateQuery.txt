@@ -5,7 +5,6 @@ UPDATE public."productos" SET
 		"clase" = '{{update_form.fieldState.clase.isVisible ? update_form.formData.clase : update_form.sourceData.clase}}',
 		"unidad_medida" = '{{update_form.fieldState.unidad_medida.isVisible ? update_form.formData.unidad_medida : update_form.sourceData.unidad_medida}}',
 		"url_imagen" = '{{update_form.fieldState.url_imagen.isVisible ? update_form.formData.url_imagen : update_form.sourceData.url_imagen}}',
-		"stock_excedente_bodega" = '{{update_form.fieldState.stock_excedente_bodega.isVisible ? update_form.formData.stock_excedente_bodega : update_form.sourceData.stock_excedente_bodega}}',
 		"embedding" = '{{update_form.fieldState.embedding.isVisible ? update_form.formData.embedding : update_form.sourceData.embedding}}',
 		"es_organico" = '{{update_form.fieldState.es_organico.isVisible ? update_form.formData.es_organico : update_form.sourceData.es_organico}}',
 		"es_local" = '{{update_form.fieldState.es_local.isVisible ? update_form.formData.es_local : update_form.sourceData.es_local}}',

@@ -6,6 +6,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
   "bottomRow": 86,
+  "bottomRowBeforeCollapse": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -178,15 +179,6 @@
       "key": "schema.__root_schema__.children.url_imagen.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.stock_excedente_bodega.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.stock_excedente_bodega.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.stock_excedente_bodega.accentColor"
-    },
-    {
       "key": "schema.__root_schema__.children.embedding.defaultValue"
     },
     {
@@ -233,6 +225,15 @@
     },
     {
       "key": "schema.__root_schema__.children.proveedor_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_proveedor.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_proveedor.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_proveedor.accentColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -285,6 +286,8 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
+  "originalBottomRow": 86,
+  "originalTopRow": 0,
   "parentColumnSpace": 16.3125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -324,7 +327,7 @@
           "label": "Clase",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "clase",
-          "position": 3
+          "position": 4
         },
         "descripcion": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -345,7 +348,7 @@
           "label": "Descripcion",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "descripcion",
-          "position": 2
+          "position": 3
         },
         "embedding": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -507,8 +510,30 @@
           "label": "Nombre",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "nombre",
-          "position": 1,
+          "position": 2,
           "sourceData": "producto1proveedor1"
+        },
+        "nombre_proveedor": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "accessor": "nombre_proveedor",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nombre_proveedor))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "nombre_proveedor",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Nombre Proveedor",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "nombre_proveedor",
+          "position": 13,
+          "sourceData": "proveedor1"
         },
         "proveedor_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -525,35 +550,13 @@
           "isFilterable": false,
           "isRequired": false,
           "isVisible": true,
-          "label": "Proveedor Id",
+          "label": "Proveedor",
           "labelTextSize": "0.875rem",
           "options": "{{C_ProveedoresSelectQuery.data}}",
           "originalIdentifier": "proveedor_id",
-          "position": 0,
+          "position": 1,
           "serverSideFiltering": false,
           "sourceData": 1
-        },
-        "stock_excedente_bodega": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "accessor": "stock_excedente_bodega",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.stock_excedente_bodega))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
-          "identifier": "stock_excedente_bodega",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Stock Excedente Bodega",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "stock_excedente_bodega",
-          "position": 6,
-          "sourceData": 0
         },
         "unidad_medida": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -574,7 +577,7 @@
           "label": "Unidad Medida",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "unidad_medida",
-          "position": 4,
+          "position": 5,
           "sourceData": "900 cc"
         },
         "url_imagen": {
@@ -596,7 +599,7 @@
           "label": "Url Imagen",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "url_imagen",
-          "position": 5
+          "position": 6
         }
       },
       "dataType": "object",
@@ -631,6 +634,7 @@
   },
   "title": "Update Row id: {{data_table.selectedRow.id}}",
   "topRow": 0,
+  "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",
   "version": 1,
   "widgetId": "y5cjzuxnb3",

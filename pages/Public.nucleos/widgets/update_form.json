@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 86,
+  "bottomRow": 27,
   "bottomRowBeforeCollapse": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
@@ -134,7 +134,7 @@
       "key": "schema.__root_schema__.children.nombre.accentColor"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
@@ -166,13 +166,13 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 86,
+  "originalBottomRow": 27,
   "originalTopRow": 0,
   "parentColumnSpace": 16.3125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "resetButtonLabel": "Reset",
+  "resetButtonLabel": "Cancelar",
   "resetButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
@@ -232,16 +232,17 @@
     }
   },
   "scrollContents": true,
+  "shouldScrollContents": true,
   "showReset": true,
   "sourceData": "{{_.omit(data_table.selectedRow, \"customColumn1\", \"__originalIndex__\", \"id\")}}",
-  "submitButtonLabel": "Update",
+  "submitButtonLabel": "Actualizar",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Update Row id: {{data_table.selectedRow.id}}",
+  "title": "Actualizar registro id: {{data_table.selectedRow.id}}",
   "topRow": 0,
   "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",

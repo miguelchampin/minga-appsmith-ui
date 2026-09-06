@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"usuarios\" (\n\t\"rut\",\n\t\"nombre\",\n\t\"email\",\n\t\"telefono\",\n\t\"nucleo_id\",\n\t\"rol_id\",\n\t\"fecha_ingreso\")\nVALUES (\n\t'{{insert_form.formData.rut}}',\n\t'{{insert_form.formData.nombre}}',\n\t'{{insert_form.formData.email}}',\n\t'{{insert_form.formData.telefono}}',\n\t'{{insert_form.formData.nucleo_id}}',\n\t'{{insert_form.formData.rol_id}}',\n\t'{{insert_form.formData.fecha_ingreso}}');",
+      "body": "INSERT INTO public.\"socios\" (\n\t\"rut\",\n\t\"nombre\",\n\t\"email\",\n\t\"telefono\",\n\t\"nucleo_id\",\n\t\"rol_id\",\n\t\"fecha_ingreso\")\nVALUES (\n\t'{{insert_form.formData.rut}}',\n\t'{{insert_form.formData.nombre}}',\n\t'{{insert_form.formData.email}}',\n\t'{{insert_form.formData.telefono}}',\n\t'{{insert_form.formData.nucleo_id}}',\n\t'{{insert_form.formData.rol_id}}',\n\t'{{insert_form.formData.fecha_ingreso}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

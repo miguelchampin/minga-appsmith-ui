@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 81,
+  "bottomRow": 56,
   "boxShadow": "none",
   "childStylesheet": {
     "ARRAY": {
@@ -113,9 +113,6 @@
       "key": "resetButtonStyles.buttonColor"
     },
     {
-      "key": "schema.__root_schema__.children.nombre.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.nombre.borderRadius"
     },
     {
@@ -158,7 +155,7 @@
       "key": "schema.__root_schema__.children.cuenta_bancaria.accentColor"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
@@ -184,11 +181,13 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{InsertQuery.run(\n\t() => SelectQuery.run()\n\t\t\t\t\t.then(() => closeModal('Insert_Modal')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
+  "originalBottomRow": 81,
+  "originalTopRow": 0,
   "parentColumnSpace": 8.125,
   "parentId": "9rhv3ioohq",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "resetButtonLabel": "Reset",
+  "resetButtonLabel": "Cancelar",
   "resetButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
@@ -223,8 +222,7 @@
           "label": "Contacto",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "contacto",
-          "position": 1,
-          "sourceData": null
+          "position": 1
         },
         "cuenta_bancaria": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -245,8 +243,7 @@
           "label": "Cuenta Bancaria",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "cuenta_bancaria",
-          "position": 4,
-          "sourceData": null
+          "position": 4
         },
         "email": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -267,8 +264,7 @@
           "label": "Email",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "email",
-          "position": 2,
-          "sourceData": null
+          "position": 2
         },
         "nombre": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -277,7 +273,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nombre))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "nombre",
@@ -311,8 +307,7 @@
           "label": "Telefono",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "telefono",
-          "position": 3,
-          "sourceData": null
+          "position": 3
         }
       },
       "dataType": "object",
@@ -336,16 +331,17 @@
     }
   },
   "scrollContents": true,
+  "shouldScrollContents": true,
   "showReset": true,
   "sourceData": "{{_.omit(data_table.tableData[0], \"customColumn1\", \"id\")}}",
-  "submitButtonLabel": "Submit",
+  "submitButtonLabel": "Aceptar",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Insert Row",
+  "title": "Insertar registro",
   "topRow": 0,
   "type": "JSON_FORM_WIDGET",
   "version": 1,

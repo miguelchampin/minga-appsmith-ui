@@ -1,2 +1,2 @@
-DELETE FROM public."usuarios"
+DELETE FROM public."socios"
   WHERE "id" = {{data_table.triggeredRow.id}};

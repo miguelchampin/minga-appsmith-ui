@@ -1,0 +1,8 @@
+UPDATE public."producto_ciclo" SET
+		"ciclo_id" = '{{update_form.fieldState.ciclo_id.isVisible ? update_form.formData.ciclo_id : update_form.sourceData.ciclo_id}}',
+    "proveedor_id" = '{{update_form.fieldState.proveedor_id.isVisible ? update_form.formData.proveedor_id : update_form.sourceData.proveedor_id}}',
+		"producto_id" = '{{update_form.fieldState.producto_id.isVisible ? update_form.formData.producto_id : update_form.sourceData.producto_id}}',
+		"precio_ciclo" = '{{update_form.fieldState.precio_ciclo.isVisible ? update_form.formData.precio_ciclo : update_form.sourceData.precio_ciclo}}',
+		"stock_proveedor" = '{{update_form.fieldState.stock_proveedor.isVisible ? update_form.formData.stock_proveedor : update_form.sourceData.stock_proveedor}}',
+		"excedentes_disponibles_ciclo" = '{{update_form.fieldState.excedentes_disponibles_ciclo.isVisible ? update_form.formData.excedentes_disponibles_ciclo : update_form.sourceData.excedentes_disponibles_ciclo}}'
+WHERE "id" = {{data_table.selectedRow.id}};

@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 81,
+  "bottomRow": 105,
   "boxShadow": "none",
   "childStylesheet": {
     "ARRAY": {
@@ -122,9 +122,6 @@
       "key": "schema.__root_schema__.children.proveedor_id.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.nombre.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.nombre.borderRadius"
     },
     {
@@ -165,15 +162,6 @@
     },
     {
       "key": "schema.__root_schema__.children.url_imagen.accentColor"
-    },
-    {
-      "key": "schema.__root_schema__.children.stock_excedente_bodega.defaultValue"
-    },
-    {
-      "key": "schema.__root_schema__.children.stock_excedente_bodega.borderRadius"
-    },
-    {
-      "key": "schema.__root_schema__.children.stock_excedente_bodega.accentColor"
     },
     {
       "key": "schema.__root_schema__.children.embedding.defaultValue"
@@ -222,9 +210,18 @@
     },
     {
       "key": "schema.__root_schema__.children.proveedor_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_proveedor.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_proveedor.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.nombre_proveedor.accentColor"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
@@ -268,11 +265,13 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{InsertQuery.run(\n\t() => SelectQuery.run()\n\t\t\t\t\t.then(() => closeModal('Insert_Modal')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
+  "originalBottomRow": 81,
+  "originalTopRow": 0,
   "parentColumnSpace": 8.125,
   "parentId": "9rhv3ioohq",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "resetButtonLabel": "Reset",
+  "resetButtonLabel": "Aceptar",
   "resetButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
@@ -307,8 +306,7 @@
           "label": "Clase",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "clase",
-          "position": 3,
-          "sourceData": null
+          "position": 3
         },
         "descripcion": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -329,8 +327,7 @@
           "label": "Descripcion",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "descripcion",
-          "position": 2,
-          "sourceData": null
+          "position": 2
         },
         "embedding": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -351,8 +348,7 @@
           "label": "Embedding",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "embedding",
-          "position": 7,
-          "sourceData": null
+          "position": 7
         },
         "es_local": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -481,7 +477,7 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nombre))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "defaultValue": "",
           "fieldType": "Text Input",
           "iconAlign": "left",
           "identifier": "nombre",
@@ -495,6 +491,28 @@
           "originalIdentifier": "nombre",
           "position": 1,
           "sourceData": "producto1proveedor1"
+        },
+        "nombre_proveedor": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "accessor": "nombre_proveedor",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "string",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.nombre_proveedor))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "nombre_proveedor",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": false,
+          "label": "Nombre Proveedor",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "nombre_proveedor",
+          "position": 13,
+          "sourceData": "proveedor1"
         },
         "proveedor_id": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -511,35 +529,13 @@
           "isFilterable": false,
           "isRequired": false,
           "isVisible": true,
-          "label": "Proveedor Id",
+          "label": "Proveedor",
           "labelTextSize": "0.875rem",
           "options": "{{C_ProveedoresSelectQuery.data}}",
           "originalIdentifier": "proveedor_id",
           "position": 0,
           "serverSideFiltering": false,
           "sourceData": 1
-        },
-        "stock_excedente_bodega": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "accessor": "stock_excedente_bodega",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "number",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.stock_excedente_bodega))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
-          "identifier": "stock_excedente_bodega",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Stock Excedente Bodega",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "stock_excedente_bodega",
-          "position": 6,
-          "sourceData": 0
         },
         "unidad_medida": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -582,8 +578,7 @@
           "label": "Url Imagen",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "url_imagen",
-          "position": 5,
-          "sourceData": null
+          "position": 5
         }
       },
       "dataType": "object",
@@ -607,16 +602,17 @@
     }
   },
   "scrollContents": true,
+  "shouldScrollContents": true,
   "showReset": true,
   "sourceData": "{{_.omit(data_table.tableData[0], \"customColumn1\", \"id\")}}",
-  "submitButtonLabel": "Submit",
+  "submitButtonLabel": "Cancelar",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Insert Row",
+  "title": "Insertar producto",
   "topRow": 0,
   "type": "JSON_FORM_WIDGET",
   "version": 1,

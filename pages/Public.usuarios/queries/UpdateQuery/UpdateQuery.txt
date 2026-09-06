@@ -1,4 +1,4 @@
-UPDATE public."usuarios" SET
+UPDATE public."socios" SET
 		"rut" = '{{update_form.fieldState.rut.isVisible ? update_form.formData.rut : update_form.sourceData.rut}}',
 		"nombre" = '{{update_form.fieldState.nombre.isVisible ? update_form.formData.nombre : update_form.sourceData.nombre}}',
     "email" = '{{update_form.fieldState.email.isVisible ? update_form.formData.email : update_form.sourceData.email}}',

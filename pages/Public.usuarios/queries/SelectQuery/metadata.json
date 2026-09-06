@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"usuarios\"\nWHERE \"rut\" ilike '%{{data_table.searchText || \"\"}}%'\nORDER BY \"{{data_table.sortOrder.column || 'id'}}\" {{data_table.sortOrder.order || 'ASC'}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
+      "body": "SELECT SCS.id\n,SCS.nombre\n,SCS.email\n,SCS.telefono\n,NCL.id as id_nucloe\n,NCL.nombre as nombre_nucleo\n,RLS.id as id_rol\n,RLS.nombre as nombre_rol\n,SCS.fecha_ingreso\n,SCS.estado\n\nFROM public.\"socios\" SCS\n\nLEFT JOIN public.nucleos NCL\nON SCS.nucleo_id = NCL.id\n\nLEFT JOIN public.roles RLS\nON SCS.rol_id = RLS.id\n\nWHERE \"rut\" ilike '%{{data_table.searchText || \"\"}}%'\nORDER BY \"{{data_table.sortOrder.column || 'id'}}\" {{data_table.sortOrder.order || 'ASC'}}\nLIMIT {{data_table.pageSize}}\nOFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

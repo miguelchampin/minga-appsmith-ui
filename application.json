@@ -30,11 +30,15 @@
       "isDefault": false
     },
     {
-      "id": "Public.ciclos_compra",
+      "id": "Vitrina",
       "isDefault": false
     },
     {
-      "id": "Vitrina",
+      "id": "Public.producto_ciclo",
+      "isDefault": false
+    },
+    {
+      "id": "Public.ciclos_compra2",
       "isDefault": false
     }
   ]
