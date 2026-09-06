@@ -114,7 +114,7 @@
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 50,
+  "rightColumn": 55,
   "selectedItemView": "{{{}}}",
   "templateHeight": 160,
   "topRow": 7,

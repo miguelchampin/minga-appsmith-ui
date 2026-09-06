@@ -15,7 +15,11 @@
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -28,6 +32,7 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 5,
   "needsErrorInfo": false,
+  "onClick": "{{insert_pedido.run().then(() => {\n  postWindowMessage('Producto agregado al pedido', \"window\", \"*\");\n}).catch(() => {\n  postWindowMessage('Hubo un problema al agregar el producto, por favor intentelo de nuevo', \"window\", \"*\");\n});}}",
   "parentColumnSpace": 12.837890625,
   "parentId": "1uoh1b6yf2",
   "parentRowSpace": 10,
