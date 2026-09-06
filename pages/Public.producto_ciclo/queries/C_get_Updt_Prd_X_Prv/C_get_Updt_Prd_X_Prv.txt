@@ -1,0 +1,3 @@
+SELECT id as value, nombre as label
+FROM public.productos
+WHERE proveedor_id = {{ update_form.formData.proveedor_id }}

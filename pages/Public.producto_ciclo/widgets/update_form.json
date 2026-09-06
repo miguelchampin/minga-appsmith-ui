@@ -241,6 +241,9 @@
     },
     {
       "key": "schema.__root_schema__.children.proveedor_id.onOptionChange"
+    },
+    {
+      "key": "schema.__root_schema__.children.producto_id.onOptionChange"
     }
   ],
   "fieldLimitExceeded": false,
@@ -383,7 +386,8 @@
           "isVisible": true,
           "label": "Producto",
           "labelTextSize": "0.875rem",
-          "options": "{{C_get_Productos_por_Proveedor.data}}",
+          "onOptionChange": "",
+          "options": "{{C_get_Updt_Prd_X_Prv.data}}",
           "originalIdentifier": "producto_id",
           "position": 2,
           "serverSideFiltering": false,
@@ -428,7 +432,7 @@
           "isVisible": true,
           "label": "Proveedor",
           "labelTextSize": "0.875rem",
-          "onOptionChange": "{{C_get_Productos_por_Proveedor.run()}}",
+          "onOptionChange": "{{C_get_Updt_Prd_X_Prv.run()}}",
           "options": "{{C_selectProveedorQuery.data}}",
           "originalIdentifier": "proveedor_id",
           "position": 1,

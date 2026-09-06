@@ -1,11 +1,11 @@
 {
   "gitSyncId": "6a89d2d2381db089d174062f_51b73077-77a6-4125-9309-67da0e3d2d0f",
-  "id": "Public.producto_ciclo_C_get_Productos_por_Proveedor",
+  "id": "Public.producto_ciclo_C_get_Insrt_Prd_X_Prv",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id as value, nombre as label\nFROM public.productos\nWHERE proveedor_id = {{ insert_form.formData.proveedor_id }}",
+      "body": "SELECT id as value, nombre as label\nFROM public.productos\nWHERE proveedor_id = {{ insert_form.formData.proveedor_id }}\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "C_get_Productos_por_Proveedor",
+    "name": "C_get_Insrt_Prd_X_Prv",
     "pageId": "Public.producto_ciclo",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
