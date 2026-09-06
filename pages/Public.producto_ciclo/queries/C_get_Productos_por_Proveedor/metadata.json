@@ -29,7 +29,7 @@
     ],
     "name": "C_get_Productos_por_Proveedor",
     "pageId": "Public.producto_ciclo",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

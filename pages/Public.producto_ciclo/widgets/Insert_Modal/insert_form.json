@@ -201,6 +201,9 @@
     },
     {
       "key": "schema.__root_schema__.children.proveedor_id.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.producto_id.options"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -269,7 +272,7 @@
           "isFilterable": false,
           "isRequired": false,
           "isVisible": true,
-          "label": "Ciclo Id",
+          "label": "Ciclo",
           "labelTextSize": "0.875rem",
           "options": "{{C_selectCicloQuery.data}}",
           "originalIdentifier": "ciclo_id",
@@ -352,18 +355,19 @@
           "children": {},
           "dataType": "number",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.producto_id))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
+          "fieldType": "Select",
           "identifier": "producto_id",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
-          "label": "Producto Id",
+          "label": "Producto",
           "labelTextSize": "0.875rem",
+          "options": "{{C_get_Productos_por_Proveedor.data}}",
           "originalIdentifier": "producto_id",
           "position": 5,
+          "serverSideFiltering": false,
           "sourceData": 1
         },
         "producto_nombre": {
