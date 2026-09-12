@@ -1,0 +1,4 @@
+SELECT id 
+FROM socios 
+WHERE email = {{appsmith.user.email}}
+AND estado = 'Activo';
