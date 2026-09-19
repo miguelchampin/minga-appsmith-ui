@@ -219,6 +219,12 @@
     },
     {
       "key": "schema.__root_schema__.children.id_nucleo.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_nucleo.options"
+    },
+    {
+      "key": "schema.__root_schema__.children.id_rol.options"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -319,7 +325,7 @@
           "label": "Estado",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "estado",
-          "position": 7,
+          "position": 9,
           "sourceData": "Activo"
         },
         "fecha_ingreso": {
@@ -344,7 +350,7 @@
           "maxDate": "2121-12-31T18:29:00.000Z",
           "minDate": "1920-12-31T18:30:00.000Z",
           "originalIdentifier": "fecha_ingreso",
-          "position": 5,
+          "position": 8,
           "shortcuts": false,
           "sourceData": "2026-07-06",
           "timePrecision": "minute"
@@ -357,19 +363,19 @@
           "children": {},
           "dataType": "null",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.id_nucleo))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
+          "fieldType": "Select",
           "identifier": "id_nucleo",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
-          "label": "Id Nucleo",
+          "label": "Nucleo",
           "labelTextSize": "0.875rem",
+          "options": "{{C_SelectNucleosQuery.data}}",
           "originalIdentifier": "id_nucleo",
-          "position": 9,
-          "sourceData": null
+          "position": 5,
+          "serverSideFiltering": false
         },
         "id_rol": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -379,18 +385,19 @@
           "children": {},
           "dataType": "number",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.id_rol))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Number Input",
-          "iconAlign": "left",
+          "fieldType": "Select",
           "identifier": "id_rol",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": false,
-          "label": "Id Rol",
+          "isVisible": true,
+          "label": "Rol",
           "labelTextSize": "0.875rem",
+          "options": "{{C_SelectRolesQuery.data}}",
           "originalIdentifier": "id_rol",
-          "position": 9,
+          "position": 7,
+          "serverSideFiltering": false,
           "sourceData": 1
         },
         "nombre": {
@@ -429,7 +436,7 @@
           "isDisabled": false,
           "isFilterable": false,
           "isRequired": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Nombre Nucleo",
           "labelTextSize": "0.875rem",
           "options": "{{C_SelectNucleosQuery.data}}",
@@ -452,7 +459,7 @@
           "isDisabled": false,
           "isFilterable": false,
           "isRequired": false,
-          "isVisible": true,
+          "isVisible": false,
           "label": "Nombre Rol",
           "labelTextSize": "0.875rem",
           "options": "{{C_SelectRolesQuery.data}}",
