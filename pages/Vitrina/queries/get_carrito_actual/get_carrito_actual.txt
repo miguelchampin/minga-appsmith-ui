@@ -1,0 +1,20 @@
+SELECT 
+  ped.id AS detalle_id, 
+  p.nombre,
+  ped.cantidad_pedida,
+  pc.precio_ciclo,
+  (ped.cantidad_pedida * pc.precio_ciclo) AS subtotal
+
+FROM pedido_detalle ped
+
+JOIN pedido_cabecera pec
+ON ped.pedido_cabecera_id = pec.id
+
+JOIN producto_ciclo pc 
+ON ped.producto_ciclo_id = pc.id
+
+JOIN productos p 
+ON pc.producto_id = p.id
+
+WHERE pec.socio_id = {{appsmith.store.socio_id}} 
+  AND pec.estado = 'Abierto';

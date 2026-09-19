@@ -1,0 +1,2 @@
+INSERT INTO detalle_pedido (cabecera_id, producto_ciclo_id, cantidad) 
+VALUES ({{this.params.cabecera_id}}, {{List1.triggeredItem.producto_ciclo_id}}, 1);
