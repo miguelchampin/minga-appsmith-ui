@@ -4,7 +4,7 @@
   "borderColor": "#d4d4d8",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "2\n",
-  "bottomRow": 22,
+  "bottomRow": 18,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -33,9 +33,9 @@
   "fontSize": "0.875rem",
   "fontStyle": "",
   "isLoading": false,
-  "isVisible": "{{ currentItem.es_organico == true }}",
+  "isVisible": "{{ currentItem.es_mas_barato == true }}",
   "key": "dzixnl17d7",
-  "leftColumn": 25,
+  "leftColumn": 30,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -46,19 +46,19 @@
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 12.837890625,
-  "parentId": "1uoh1b6yf2",
+  "parentId": "romzjs89yd",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 33,
+  "rightColumn": 39,
   "shouldTruncate": false,
-  "text": "🌍 orgánico",
+  "text": "🪙 más barato",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 18,
+  "topRow": 14,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "whkngazzto",
-  "widgetName": "es_organico"
+  "widgetId": "ghsj1ohmf7",
+  "widgetName": "es_mas_barato"
 }

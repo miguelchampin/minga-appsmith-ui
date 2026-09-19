@@ -12,6 +12,7 @@ export default {
     // Si el script llega hasta aquí, el usuario ESTÁ autorizado.
     // Ejecutamos las consultas manuales de esta página específica.
     //await get_pedidos_historicos.run(); vamos a dejar esto pendiente para una implementación más detallada
+		storeValue('ui_lista', true);
     // await otra_consulta.run();
   }
 }

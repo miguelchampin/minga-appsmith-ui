@@ -1,7 +1,10 @@
 {
   "animateLoading": true,
+  "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
+  "borderColor": "#d4d4d8",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 28,
+  "borderWidth": "2\n",
+  "bottomRow": 18,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -13,41 +16,49 @@
       "key": "borderRadius"
     },
     {
-      "key": "text"
+      "key": "isVisible"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.875rem",
+  "fontStyle": "",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ currentItem.es_pequena_produccion == true }}",
   "key": "dzixnl17d7",
-  "leftColumn": 10,
+  "leftColumn": 17,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 9,
-  "mobileLeftColumn": 47,
-  "mobileRightColumn": 63,
-  "mobileTopRow": 5,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 10,
+  "mobileTopRow": 10,
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 12.837890625,
-  "parentId": "1uoh1b6yf2",
+  "parentId": "romzjs89yd",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 20,
+  "rightColumn": 30,
   "shouldTruncate": false,
-  "text": "${{currentItem.precio_ciclo}}",
+  "text": "👩‍🌾 pequeña producción",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 24,
+  "topRow": 14,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "q7g6olzkzl",
-  "widgetName": "ciclo_prod_precio"
+  "widgetId": "qjjvs58s8v",
+  "widgetName": "es_pequena_produccion"
 }

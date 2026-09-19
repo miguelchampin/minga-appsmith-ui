@@ -34,7 +34,7 @@
   "needsErrorInfo": false,
   "onClick": "{{insert_pedido.run().then(() => {\n  postWindowMessage('Producto agregado al pedido', \"window\", \"*\");\n}).catch(() => {\n  postWindowMessage('Hubo un problema al agregar el producto, por favor intentelo de nuevo', \"window\", \"*\");\n});}}",
   "parentColumnSpace": 12.837890625,
-  "parentId": "1uoh1b6yf2",
+  "parentId": "romzjs89yd",
   "parentRowSpace": 10,
   "placement": "CENTER",
   "recaptchaType": "V3",
@@ -46,6 +46,6 @@
   "topRow": 24,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "f2llrpe9oq",
+  "widgetId": "4pvjrxvbxx",
   "widgetName": "Button1"
 }
