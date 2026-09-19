@@ -35,8 +35,17 @@
   ],
   "containerStyle": "card",
   "displayName": "Container",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "hideCard": false,
@@ -44,7 +53,7 @@
   "isCanvas": true,
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ !appsmith.store.ui_lista }}",
   "key": "xaeo5brqqq",
   "leftColumn": 55,
   "maxDynamicHeight": 9000,
