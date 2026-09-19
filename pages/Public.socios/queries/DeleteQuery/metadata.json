@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a526d78f320a9e73655d391_578be9e9-b1e3-42ee-84c6-a7475353a5e1",
-  "id": "Public.usuarios_Query1",
+  "gitSyncId": "6a526d78f320a9e73655d391_b5bf35b9-f6aa-4d6e-a97f-ac87977a4efc",
+  "id": "Public.socios_DeleteQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"auditoria_general\" LIMIT 10;",
+      "body": "DELETE FROM public.\"socios\"\n  WHERE \"id\" = {{data_table.triggeredRow.id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,8 +22,13 @@
       "name": "La_Minga_DB",
       "pluginId": "postgres-plugin"
     },
-    "name": "Query1",
-    "pageId": "Public.usuarios",
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
+    "name": "DeleteQuery",
+    "pageId": "Public.socios",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }

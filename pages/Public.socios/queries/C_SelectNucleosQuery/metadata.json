@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a526d78f320a9e73655d391_a9276ac4-bad8-4414-a414-3f5d27b87e1c",
-  "id": "Public.usuarios_C_SelectRolesQuery",
+  "gitSyncId": "6a526d78f320a9e73655d391_85e1d87b-907b-4ff4-a875-9169f9a356e2",
+  "id": "Public.socios_C_SelectNucleosQuery",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id as VALUE, REPLACE(nombre,'_',' ') as LABEL \nFROM roles;",
+      "body": "SELECT id as VALUE, nombre as LABEL FROM nucleos;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,8 +23,8 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "C_SelectRolesQuery",
-    "pageId": "Public.usuarios",
+    "name": "C_SelectNucleosQuery",
+    "pageId": "Public.socios",
     "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }

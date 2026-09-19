@@ -24,7 +24,7 @@
   "icon": "plant",
   "pages": [
     {
-      "id": "Public.usuarios",
+      "id": "Public.socios",
       "isDefault": true
     },
     {

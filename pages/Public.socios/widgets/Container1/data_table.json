@@ -23,6 +23,7 @@
   },
   "columnOrder": [
     "id",
+    "rut",
     "nombre",
     "email",
     "telefono",
@@ -30,8 +31,8 @@
     "estado",
     "nombre_nucleo",
     "nombre_rol",
-    "id_nucloe",
     "id_rol",
+    "id_nucleo",
     "customColumn1"
   ],
   "columnSizeMap": {
@@ -39,7 +40,7 @@
     "step": 62,
     "task": 245
   },
-  "columnUpdatedAt": 1788107511063,
+  "columnUpdatedAt": 1789831688574,
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": "0",
   "delimiter": ",",
@@ -116,10 +117,13 @@
       "key": "primaryColumns.nombre_rol.computedValue"
     },
     {
-      "key": "primaryColumns.id_nucloe.computedValue"
+      "key": "primaryColumns.id_rol.computedValue"
     },
     {
-      "key": "primaryColumns.id_rol.computedValue"
+      "key": "primaryColumns.rut.computedValue"
+    },
+    {
+      "key": "primaryColumns.id_nucleo.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -328,21 +332,21 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "id_nucloe": {
-      "alias": "id_nucloe",
+    "id_nucleo": {
+      "alias": "id_nucleo",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
-      "columnType": "number",
-      "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_nucloe\"])) : id_nucloe })()}}",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"id_nucleo\"])) : id_nucleo })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
       "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "id_nucloe",
-      "index": 4,
+      "id": "id_nucleo",
+      "index": 5,
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
@@ -351,9 +355,9 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "id_nucloe",
+      "label": "id_nucleo",
       "notation": "standard",
-      "originalId": "id_nucloe",
+      "originalId": "id_nucleo",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
@@ -384,7 +388,7 @@
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
-      "isVisible": true,
+      "isVisible": false,
       "label": "id_rol",
       "notation": "standard",
       "originalId": "id_rol",
@@ -490,6 +494,40 @@
       "label": "nombre_rol",
       "notation": "standard",
       "originalId": "nombre_rol",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "rut": {
+      "alias": "rut",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = data_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"rut\"])) : rut })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "rut",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "rut",
+      "notation": "standard",
+      "originalId": "rut",
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",

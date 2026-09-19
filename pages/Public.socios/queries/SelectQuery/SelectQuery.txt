@@ -1,8 +1,9 @@
 SELECT SCS.id
+,SCS.rut
 ,SCS.nombre
 ,SCS.email
 ,SCS.telefono
-,NCL.id as id_nucloe
+,NCL.id as id_nucleo
 ,NCL.nombre as nombre_nucleo
 ,RLS.id as id_rol
 ,RLS.nombre as nombre_rol
