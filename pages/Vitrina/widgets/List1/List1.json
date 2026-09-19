@@ -110,7 +110,7 @@
   "parentColumnSpace": 15.171875,
   "parentId": "0",
   "parentRowSpace": 10,
-  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+  "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"producto_ciclo_id\"] )}}",
   "renderMode": "CANVAS",
   "requiresFlatWidgetChildren": true,
   "responsiveBehavior": "fill",

@@ -33,7 +33,7 @@
   "fontSize": "0.875rem",
   "fontStyle": "",
   "isLoading": false,
-  "isVisible": "{{ currentItem.es_mas_barato == true }}/",
+  "isVisible": "{{ currentItem.es_mas_barato == true }}",
   "key": "dzixnl17d7",
   "leftColumn": 30,
   "maxDynamicHeight": 9000,
