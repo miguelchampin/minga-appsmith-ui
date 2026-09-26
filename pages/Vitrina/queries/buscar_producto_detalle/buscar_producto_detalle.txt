@@ -1,0 +1,6 @@
+SELECT 
+id
+,cantidad_pedida
+FROM pedido_detalle 
+WHERE pedido_cabecera_id = {{this.params.cabecera_id}} 
+AND producto_ciclo_id = {{this.params.producto_ciclo_id}};

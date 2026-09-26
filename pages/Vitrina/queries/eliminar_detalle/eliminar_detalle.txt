@@ -1,0 +1,2 @@
+DELETE FROM detalle_pedido 
+WHERE id = {{this.params.detalle_id}};
