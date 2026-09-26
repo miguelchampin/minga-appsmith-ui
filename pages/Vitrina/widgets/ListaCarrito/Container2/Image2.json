@@ -16,7 +16,7 @@
   "enableDownload": false,
   "enableRotation": false,
   "flexVerticalAlignment": "start",
-  "image": "{{currentItem.img}}",
+  "image": "{{currentItem.url_imagen}}",
   "imageShape": "RECTANGLE",
   "isLoading": false,
   "isVisible": true,

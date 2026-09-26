@@ -62,6 +62,7 @@
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "stretch",
   "isCanvas": true,
   "isDeletable": false,

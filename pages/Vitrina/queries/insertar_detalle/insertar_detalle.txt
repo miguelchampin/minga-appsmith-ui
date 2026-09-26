@@ -1,2 +1,2 @@
-INSERT INTO detalle_pedido (cabecera_id, producto_ciclo_id, cantidad) 
-VALUES ({{this.params.cabecera_id}}, {{List1.triggeredItem.producto_ciclo_id}}, 1);
+INSERT INTO pedido_detalle (pedido_cabecera_id, producto_ciclo_id, nombre_producto_historico, precio_unitario_cobrado, cantidad_pedida) 
+VALUES ({{this.params.cabecera_id}}, {{List1.triggeredItem.producto_ciclo_id}}, {{List1.triggeredItem.nombre}}, {{List1.triggeredItem.precio_ciclo}}, 1);

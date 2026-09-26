@@ -1,9 +1,10 @@
 SELECT 
-  ped.id AS detalle_id, 
+  ped.id, 
   p.nombre,
   ped.cantidad_pedida,
   pc.precio_ciclo,
   (ped.cantidad_pedida * pc.precio_ciclo) AS subtotal
+	,p.url_imagen
 
 FROM pedido_detalle ped
 

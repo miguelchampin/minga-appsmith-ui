@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a89d2d2381db089d174062f_788af388-3a2b-4c86-9972-c44a2bec970e",
-  "id": "Vitrina_insertar_detalle",
+  "gitSyncId": "6a89d2d2381db089d174062f_0d052263-d018-4b1a-a6d0-fd91c7170002",
+  "id": "Vitrina_get_ciclo_actual",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO pedido_detalle (pedido_cabecera_id, producto_ciclo_id, nombre_producto_historico, precio_unitario_cobrado, cantidad_pedida) \nVALUES ({{this.params.cabecera_id}}, {{List1.triggeredItem.producto_ciclo_id}}, {{List1.triggeredItem.nombre}}, {{List1.triggeredItem.precio_ciclo}}, 1);",
+      "body": "SELECT id \nFROM ciclos_compra \nWHERE estado = 'Abierto' \nLIMIT 1;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,12 +22,8 @@
       "name": "La_Minga_DB",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
-    "name": "insertar_detalle",
+    "dynamicBindingPathList": [],
+    "name": "get_ciclo_actual",
     "pageId": "Vitrina",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

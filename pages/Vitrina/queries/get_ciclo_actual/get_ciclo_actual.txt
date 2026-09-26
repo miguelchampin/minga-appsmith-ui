@@ -1,0 +1,4 @@
+SELECT id 
+FROM ciclos_compra 
+WHERE estado = 'Abierto' 
+LIMIT 1;

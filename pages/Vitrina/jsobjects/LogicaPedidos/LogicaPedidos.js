@@ -1,5 +1,6 @@
 export default {
   agregarAlCarrito: async () => {
+		
     try {
       let cabeceraId;
       const busqueda = await buscar_cabecera.run();
@@ -14,7 +15,7 @@ export default {
       // Se inserta el producto en la base de datos
       await insertar_detalle.run({ cabecera_id: cabeceraId });
       
-      // NUEVO: Refresca el widget del carrito en la pantalla
+      // Refresca el widget del carrito en la pantalla
       await get_carrito_actual.run();
       
       showAlert('¡Producto agregado al pedido!', 'success');
