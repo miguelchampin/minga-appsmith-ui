@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 20,
   "shouldTruncate": false,
-  "text": "${{currentItem.precio_ciclo}}",
+  "text": "{{(currentItem.precio_ciclo).toLocaleString('es-CL', { style: 'currency', currency: 'CLP' })}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 24,
