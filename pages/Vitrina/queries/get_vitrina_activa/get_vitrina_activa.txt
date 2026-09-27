@@ -16,4 +16,5 @@ SELECT
 FROM producto_ciclo pc
 JOIN productos p ON pc.producto_id = p.id
 JOIN ciclos_compra c ON pc.ciclo_id = c.id
-WHERE c.estado = 'Abierto';
+WHERE c.estado = 'Abierto'
+AND p.nombre ILIKE '%' || {{InputBuscador.text || ''}} || '%';

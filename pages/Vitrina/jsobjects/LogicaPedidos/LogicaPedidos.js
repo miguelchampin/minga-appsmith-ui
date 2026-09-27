@@ -1,6 +1,8 @@
 export default {
   agregarAlCarrito: async () => {
 		
+		const itemClickeado = List1.triggeredItem; 
+		
     try {
       let cabeceraId;
       const busqueda = await buscar_cabecera.run();
@@ -16,7 +18,7 @@ export default {
 			// 		primero revisamos si el producto ya está en este carrito
       const productoExistente = await buscar_producto_detalle.run({ 
         cabecera_id: cabeceraId, 
-        producto_ciclo_id: List1.triggeredItem.producto_ciclo_id 
+        producto_ciclo_id: itemClickeado.producto_ciclo_id 
       });
       
       if (productoExistente && productoExistente.length > 0) {
@@ -28,7 +30,9 @@ export default {
         // Si no existe, lo insertamos por primera vez
         await insertar_detalle.run({ 
           cabecera_id: cabeceraId,
-          producto_ciclo_id: List1.triggeredItem.producto_ciclo_id
+          producto_ciclo_id: itemClickeado.producto_ciclo_id,
+					nombre: itemClickeado.nombre,
+					precio_ciclo: itemClickeado.precio_ciclo
         });
       }
       
@@ -60,4 +64,52 @@ export default {
       showAlert('Error al intentar eliminar el producto', 'error');
       console.error(error);
     }
+	},
+	restarCantidad: async () => {
+
+    const itemClickeado = ListaCarrito.triggeredItem; 
+    
+    try {
+      //  Evaluamos la cantidad actual
+      if (itemClickeado.cantidad_pedida > 1) {
+        // Si hay 2 o más, simplemente restamos 1
+        await restar_cantidad_detalle.run({
+          detalle_id: itemClickeado.detalle_id 
+        });
+      } else {
+        // Si hay 1, restar lo dejaría en 0. Mejor lo eliminamos de la base de datos.
+        await eliminar_detalle.run({ 
+          detalle_id: itemClickeado.detalle_id 
+        });
+        showAlert('Producto eliminado del pedido', 'info');
+      }
+      
+      // 3. Refrescamos el carrito en pantalla
+      await get_carrito_actual.run();
+      
+    } catch (error) {
+      showAlert('Error al modificar la cantidad', 'error');
+      console.error(error);
+    }
+  },
+	
+	sumarCantidad: async () => {
+    // 1. Capturamos la tarjeta desde el CARRITO (ListCarrito)
+    const itemClickeado = ListaCarrito.triggeredItem; 
+    
+    try {
+      // 2. Reutilizamos tu query de actualización pasándole el ID correcto
+      await sumar_cantidad_detalle.run({ 
+        // Recuerda usar .id o .detalle_id según lo que descubriste en el paso anterior
+        detalle_id: itemClickeado.detalle_id 
+      });
+      
+      // 3. Refrescamos la pantalla para mostrar el nuevo número
+      await get_carrito_actual.run();
+      
+    } catch (error) {
+      showAlert('Error al sumar la cantidad', 'error');
+      console.error(error);
+    }
+  }
 }

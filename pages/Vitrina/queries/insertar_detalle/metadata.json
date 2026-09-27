@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO pedido_detalle (pedido_cabecera_id, producto_ciclo_id, nombre_producto_historico, precio_unitario_cobrado, cantidad_pedida) \nVALUES ({{this.params.cabecera_id}}, {{List1.triggeredItem.producto_ciclo_id}}, {{List1.triggeredItem.nombre}}, {{List1.triggeredItem.precio_ciclo}}, 1);",
+      "body": "INSERT INTO pedido_detalle (pedido_cabecera_id, producto_ciclo_id, nombre_producto_historico, precio_unitario_cobrado, cantidad_pedida) \nVALUES ({{this.params.cabecera_id}}, {{this.params.producto_ciclo_id}}, {{this.params.nombre}}, {{this.params.precio_ciclo}}, 1);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

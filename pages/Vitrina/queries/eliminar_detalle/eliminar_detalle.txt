@@ -1,2 +1,2 @@
-DELETE FROM detalle_pedido 
+DELETE FROM pedido_detalle 
 WHERE id = {{this.params.detalle_id}};

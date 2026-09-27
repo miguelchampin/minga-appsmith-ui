@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a89d2d2381db089d174062f_b45efdac-02ec-4db4-88d8-9077b48558ed",
-  "id": "Vitrina_eliminar_detalle",
+  "gitSyncId": "6a89d2d2381db089d174062f_a8eb6241-80a2-4204-8aa9-c9c795fa84a1",
+  "id": "Vitrina_restar_cantidad_detalle",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "DELETE FROM pedido_detalle \nWHERE id = {{this.params.detalle_id}};",
+      "body": "UPDATE pedido_detalle \nSET cantidad_pedida = cantidad_pedida - 1 \nWHERE id = {{this.params.detalle_id}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "eliminar_detalle",
+    "name": "restar_cantidad_detalle",
     "pageId": "Vitrina",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
