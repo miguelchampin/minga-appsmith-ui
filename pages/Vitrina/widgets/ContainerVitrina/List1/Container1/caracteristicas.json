@@ -4,7 +4,7 @@
   "borderColor": "#d4d4d8",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 23,
+  "bottomRow": 15,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -43,12 +43,12 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 61,
+  "rightColumn": 53,
   "shouldTruncate": false,
   "text": "{{ \n[\ncurrentItem.es_pequena_produccion ? \"👩‍🌾 pequeña producción\" : null,  \ncurrentItem.es_mas_barato ? \"🪙 más barato\" : null,  \ncurrentItem.es_sin_gluten ? \"🌾 sin gluten\" : null,\ncurrentItem.es_local ? \"📍local\" : null,\ncurrentItem.es_organico ? \"🌱 orgánico\" : null,\ncurrentItem.es_vegano ? \"💚 vegano\" : null\n].filter(Boolean).join(\" - \")\n}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
-  "topRow": 19,
+  "topRow": 11,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

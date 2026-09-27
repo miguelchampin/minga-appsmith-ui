@@ -18,7 +18,7 @@
       "isVisible": "true",
       "labelTextSize": "0.875rem",
       "leftColumn": 0,
-      "minHeight": 884,
+      "minHeight": 1070,
       "parentColumnSpace": 1,
       "parentId": "vmorzie6eq",
       "parentRowSpace": 1,
@@ -42,7 +42,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minHeight": 1070,
-  "originalBottomRow": 40,
+  "originalBottomRow": 107,
   "originalTopRow": 16,
   "parentColumnSpace": 18.8828125,
   "parentId": "0",
@@ -54,5 +54,5 @@
   "version": 2,
   "widgetId": "vmorzie6eq",
   "widgetName": "Insert_Modal",
-  "width": 532
+  "width": 526
 }

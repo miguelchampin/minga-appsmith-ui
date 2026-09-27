@@ -33,6 +33,9 @@
     "task": 245
   },
   "columnUpdatedAt": 1788111529067,
+  "columnWidthMap": {
+    "id": 269
+  },
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": "0",
   "delimiter": ",",

@@ -1,60 +1,69 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 8,
   "boxShadow": "none",
-  "defaultText": "",
+  "defaultOptionValue": "",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
-  "dynamicTriggerPathList": [
+  "dynamicPropertyPathList": [
     {
-      "key": "onTextChanged"
+      "key": "sourceData"
     }
   ],
-  "iconAlign": "left",
-  "inputType": "TEXT",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
   "isDisabled": false,
+  "isFilterable": false,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "nq9h93o30l",
-  "label": "Buscar",
+  "key": "eyigw4lm2j",
   "labelAlignment": "right",
   "labelPosition": "Left",
-  "labelStyle": "",
+  "labelText": "Clase",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 21,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 10,
-  "mobileLeftColumn": 33,
-  "mobileRightColumn": 45,
-  "mobileTopRow": 3,
+  "mobileBottomRow": 12,
+  "mobileLeftColumn": 22,
+  "mobileRightColumn": 42,
+  "mobileTopRow": 5,
   "needsErrorInfo": false,
-  "onTextChanged": "{{get_vitrina_activa.run()}}",
-  "parentColumnSpace": 15.171875,
+  "onOptionChange": "{{get_vitrina_activa.run()}}",
+  "optionLabel": "clase",
+  "optionValue": "clase",
+  "originalBottomRow": 10,
+  "originalTopRow": 6,
+  "parentColumnSpace": 9.881103515625,
   "parentId": "4ttazh7tar",
   "parentRowSpace": 10,
-  "placeholderText": "Buscar",
+  "placeholderText": "Seleccionar clase",
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
   "responsiveBehavior": "fill",
-  "rightColumn": 21,
-  "showStepArrows": false,
+  "rightColumn": 46,
+  "serverSideFiltering": false,
+  "sourceData": "{{get_clases_productos.data}}",
   "topRow": 4,
-  "type": "INPUT_WIDGET_V2",
-  "version": 2,
-  "widgetId": "290hyjq1qf",
-  "widgetName": "InputBuscador"
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "5wrjqv6dn0",
+  "widgetName": "SelectClase"
 }

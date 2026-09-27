@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 11,
   "boxShadow": "none",
   "dynamicBindingPathList": [
     {
@@ -41,7 +41,7 @@
   "parentId": "romzjs89yd",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 47,
+  "rightColumn": 53,
   "shouldTruncate": false,
   "text": "{{currentItem.descripcion}}",
   "textAlign": "LEFT",

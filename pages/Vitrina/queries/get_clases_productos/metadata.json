@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "6a89d2d2381db089d174062f_c9de6610-604f-45fb-89bd-0f888de9564b",
-  "id": "Page1_Query1",
+  "gitSyncId": "6a89d2d2381db089d174062f_5b692a6c-a789-4aee-815f-83a7e3b3169d",
+  "id": "Vitrina_get_clases_productos",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    p.id as producto_id,\n    pc.id as producto_ciclo_id,\n    p.nombre,\n    p.url_imagen,\n    pc.precio_ciclo,\n    p.es_organico,\n    p.es_local\nFROM producto_ciclo pc\nJOIN productos p ON pc.producto_id = p.id\nJOIN ciclo_compra c ON pc.ciclo_id = c.id\nWHERE c.estado = 'Abierto';",
+      "body": "SELECT DISTINCT\nclase\nFROM public.\"productos\" prd\nINNER JOIN public.\"producto_ciclo\" pc\non prd.id = pc.producto_id\nINNER JOIN public.ciclos_compra cic\nON pc.ciclo_id = cic.id\nWHERE cic.estado = 'Abierto'\n;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "name": "Query1",
-    "pageId": "Page1",
-    "runBehaviour": "MANUAL",
+    "name": "get_clases_productos",
+    "pageId": "Vitrina",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

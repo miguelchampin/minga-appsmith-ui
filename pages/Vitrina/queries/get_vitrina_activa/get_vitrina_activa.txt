@@ -17,4 +17,16 @@ FROM producto_ciclo pc
 JOIN productos p ON pc.producto_id = p.id
 JOIN ciclos_compra c ON pc.ciclo_id = c.id
 WHERE c.estado = 'Abierto'
-AND p.nombre ILIKE '%' || {{InputBuscador.text || ''}} || '%';
+--Filtro busqueda
+AND p.nombre ILIKE '%' || {{InputBuscador.text || ''}} || '%'
+-- Filtro por clase
+AND ({{SelectClase.selectedOptionValue === ""}} OR p.clase = {{SelectClase.selectedOptionValue}})
+-- Filtros Especiales
+AND ({{!FiltrosEspeciales.selectedValues.includes('organico')}} OR p.es_organico = true)
+AND ({{!FiltrosEspeciales.selectedValues.includes('local')}} OR p.es_local = true)
+AND ({{!FiltrosEspeciales.selectedValues.includes('pequena_produccion')}} OR p.es_pequena_produccion = true)
+AND ({{!FiltrosEspeciales.selectedValues.includes('mas_barato')}} OR p.es_mas_barato = true)
+AND ({{!FiltrosEspeciales.selectedValues.includes('vegano')}} OR p.es_vegano = true)
+AND ({{!FiltrosEspeciales.selectedValues.includes('sin_gluten')}} OR p.es_sin_gluten = true)
+;
+	

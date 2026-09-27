@@ -265,7 +265,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{InsertQuery.run(\n\t() => SelectQuery.run()\n\t\t\t\t\t.then(() => closeModal('Insert_Modal')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
-  "originalBottomRow": 81,
+  "originalBottomRow": 105,
   "originalTopRow": 0,
   "parentColumnSpace": 8.125,
   "parentId": "9rhv3ioohq",

@@ -93,7 +93,7 @@
   "itemBackgroundColor": "#FFFFFF",
   "itemSpacing": "4",
   "key": "von8fmr03n",
-  "leftColumn": 45,
+  "leftColumn": 43,
   "listData": "{{get_carrito_actual.data}}",
   "mainCanvasId": "jl0el93onn",
   "mainContainerId": "31h54izw4h",

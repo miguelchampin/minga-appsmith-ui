@@ -1,0 +1,53 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 12,
+  "defaultSelectedValues": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onSelectionChange"
+    }
+  ],
+  "flexVerticalAlignment": "start",
+  "isCanvas": false,
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "4flshyx0wm",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelText": "",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 6,
+  "mobileLeftColumn": 34,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onSelectionChange": "{{get_vitrina_activa.run()}}",
+  "options": "[\n{\"label\": \"Orgánico\", \"value\": \"organico\"}\n\n,{\"label\": \"Local\", \"value\": \"local\"}\n\n,{\"label\": \"Pequeña producción\", \"value\": \"pequena_produccion\"}\n\n,{\"label\": \"Más barato\", \"value\": \"mas_barato\"}\n\n,{\"label\": \"Vegano\", \"value\": \"vegano\"}\n\n,{\"label\": \"Sin Gluten\", \"value\": \"sin_gluten\"}\n]",
+  "originalBottomRow": 14,
+  "originalTopRow": 8,
+  "parentColumnSpace": 9.881103515625,
+  "parentId": "4ttazh7tar",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 63,
+  "topRow": 8,
+  "type": "SWITCH_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "yhgbw4ej5j",
+  "widgetName": "FiltrosEspeciales"
+}

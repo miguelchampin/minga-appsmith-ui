@@ -1,6 +1,6 @@
 {
   "borderRadius": "0px",
-  "bottomRow": 376,
+  "bottomRow": 36,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -41,6 +41,7 @@
   "leftColumn": 17,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
+  "minHeight": 360,
   "originalBottomRow": 40,
   "originalTopRow": 16,
   "parentColumnSpace": 18.8828125,
