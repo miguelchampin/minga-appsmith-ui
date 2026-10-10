@@ -8,16 +8,24 @@
   "dynamicBindingPathList": [
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
   "iconName": "small-minus",
-  "isDisabled": false,
+  "isDisabled": "{{ !appsmith.store.ciclo_id || get_ciclo_actual.data.length === 0 }}",
   "isLoading": false,
   "isVisible": true,
   "key": "saj07cf4y2",

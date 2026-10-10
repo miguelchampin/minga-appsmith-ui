@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "get_ciclo_actual",
     "pageId": "Vitrina",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

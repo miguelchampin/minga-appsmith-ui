@@ -66,6 +66,12 @@ export default {
     }
 	},
 	restarCantidad: async () => {
+		
+		// Validación de ciclo, si no hay ciclo activo, detenemos la función inmediatamente.
+    if (!appsmith.store.ciclo_id || get_ciclo_actual.data.length === 0) {
+      showAlert('El ciclo de compra ha finalizado. No puedes modificar el pedido.', 'warning');
+      return;
+    }
 
     const itemClickeado = ListaCarrito.triggeredItem; 
     
@@ -94,6 +100,12 @@ export default {
   },
 	
 	sumarCantidad: async () => {
+		// Validación de ciclo, si no hay ciclo activo, detenemos la función inmediatamente.
+    if (!appsmith.store.ciclo_id || get_ciclo_actual.data.length === 0) {
+      showAlert('El ciclo de compra ha finalizado. No puedes modificar el pedido.', 'warning');
+      return;
+    }
+		
     // 1. Capturamos la tarjeta desde el CARRITO (ListCarrito)
     const itemClickeado = ListaCarrito.triggeredItem; 
     
