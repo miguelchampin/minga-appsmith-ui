@@ -361,7 +361,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Update Row id: {{data_table.selectedRow.id}}",
+  "title": "Actualizar proveedor: {{data_table.selectedRow.nombre}}",
   "topRow": 0,
   "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",

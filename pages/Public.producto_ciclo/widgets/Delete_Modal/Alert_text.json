@@ -2,7 +2,11 @@
   "borderRadius": "0px",
   "bottomRow": 5,
   "boxShadow": "none",
-  "dynamicBindingPathList": [],
+  "dynamicBindingPathList": [
+    {
+      "key": "text"
+    }
+  ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
@@ -21,8 +25,8 @@
   "minDynamicHeight": 4,
   "overflow": "NONE",
   "parentId": "zi8fjakv8o",
-  "rightColumn": 41,
-  "text": "Delete Row",
+  "rightColumn": 55,
+  "text": "Eliminar producto {{data_table.selectedRow.producto_nombre}}",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

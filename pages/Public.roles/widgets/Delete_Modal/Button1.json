@@ -20,7 +20,7 @@
   "isLoading": false,
   "isVisible": "true",
   "labelTextSize": "0.875rem",
-  "leftColumn": 34,
+  "leftColumn": 33,
   "onClick": "{{closeModal('Delete_Modal')}}",
   "parentId": "zi8fjakv8o",
   "recaptchaType": "V3",

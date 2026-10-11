@@ -19,5 +19,6 @@ ON pc.producto_id = p.id
 
 WHERE pec.socio_id = {{appsmith.store.socio_id}} 
   AND pec.estado = 'Abierto'
+	AND pec.ciclo_id = {{appsmith.store.ciclo_id}}
 ORDER BY ped.id
 ;

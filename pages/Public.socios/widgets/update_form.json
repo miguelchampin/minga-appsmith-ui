@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 86,
+  "bottomRow": 78,
   "bottomRowBeforeCollapse": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
@@ -227,7 +227,7 @@
       "key": "schema.__root_schema__.children.id_rol.options"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
@@ -262,13 +262,13 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 27,
+  "originalBottomRow": 86,
   "originalTopRow": 0,
   "parentColumnSpace": 16.3125,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "resetButtonLabel": "Reset",
+  "resetButtonLabel": "Cancelar",
   "resetButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
@@ -314,18 +314,19 @@
           "children": {},
           "dataType": "string",
           "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.estado))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
+          "fieldType": "Select",
           "identifier": "estado",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
           "label": "Estado",
           "labelTextSize": "0.875rem",
+          "options": "[\n  {\n    \"label\": \"Activo\",\n    \"value\": \"Activo\"\n  },\n  {\n    \"label\": \"Inactivo\",\n    \"value\": \"Inactivo\"\n  }\n]",
           "originalIdentifier": "estado",
           "position": 9,
+          "serverSideFiltering": false,
           "sourceData": "Activo"
         },
         "fecha_ingreso": {
@@ -533,16 +534,17 @@
     }
   },
   "scrollContents": true,
+  "shouldScrollContents": true,
   "showReset": true,
   "sourceData": "{{_.omit(data_table.selectedRow, \"customColumn1\", \"__originalIndex__\", \"id\")}}",
-  "submitButtonLabel": "Update",
+  "submitButtonLabel": "Actualizar",
   "submitButtonStyles": {
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "boxShadow": "none",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Update Row id: {{data_table.selectedRow.id}}",
+  "title": "Actualizar socio: {{data_table.selectedRow.nombre}}",
   "topRow": 0,
   "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",

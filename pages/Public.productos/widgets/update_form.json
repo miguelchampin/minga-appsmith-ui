@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 86,
+  "bottomRow": 105,
   "bottomRowBeforeCollapse": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
@@ -236,7 +236,7 @@
       "key": "schema.__root_schema__.children.nombre_proveedor.accentColor"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
       "key": "schema.__root_schema__.children.date_of_birth.defaultValue"
@@ -623,6 +623,7 @@
     }
   },
   "scrollContents": true,
+  "shouldScrollContents": true,
   "showReset": true,
   "sourceData": "{{_.omit(data_table.selectedRow, \"customColumn1\", \"__originalIndex__\", \"id\")}}",
   "submitButtonLabel": "Update",
@@ -632,7 +633,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Update Row id: {{data_table.selectedRow.id}}",
+  "title": "Actualizar registro   {{data_table.selectedRow.nombre}}",
   "topRow": 0,
   "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",

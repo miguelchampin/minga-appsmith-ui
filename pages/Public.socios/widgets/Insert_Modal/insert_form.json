@@ -149,9 +149,6 @@
       "key": "schema.__root_schema__.children.fecha_ingreso.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.estado.defaultValue"
-    },
-    {
       "key": "schema.__root_schema__.children.estado.borderRadius"
     },
     {
@@ -295,19 +292,20 @@
           "boxShadow": "none",
           "children": {},
           "dataType": "string",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.estado))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
+          "defaultValue": "Activo",
+          "fieldType": "Select",
           "identifier": "estado",
           "isCustomField": false,
           "isDisabled": false,
+          "isFilterable": false,
           "isRequired": false,
-          "isSpellCheck": false,
           "isVisible": true,
           "label": "Estado",
           "labelTextSize": "0.875rem",
+          "options": "[\n  {\n    \"label\": \"Activo\",\n    \"value\": \"Activo\"\n  },\n  {\n    \"label\": \"Inactivo\",\n    \"value\": \"Inactivo\"\n  }\n]",
           "originalIdentifier": "estado",
           "position": 8,
+          "serverSideFiltering": false,
           "sourceData": "Activo"
         },
         "fecha_ingreso": {
@@ -526,7 +524,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Insert Row",
+  "title": "Agregar socio",
   "topRow": 0,
   "type": "JSON_FORM_WIDGET",
   "version": 1,

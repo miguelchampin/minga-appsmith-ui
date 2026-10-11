@@ -14,8 +14,14 @@ SELECT
 		,p.es_vegano
 		,p.es_sin_gluten
 FROM producto_ciclo pc
-JOIN productos p ON pc.producto_id = p.id
-JOIN ciclos_compra c ON pc.ciclo_id = c.id
+
+JOIN productos p 
+ON pc.producto_id = p.id
+
+JOIN ciclos_compra c 
+ON pc.ciclo_id = c.id
+AND c.fecha_cierre > CURRENT_TIMESTAMP
+
 WHERE c.estado = 'Abierto'
 --Filtro busqueda
 AND p.nombre ILIKE '%' || {{InputBuscador.text || ''}} || '%'

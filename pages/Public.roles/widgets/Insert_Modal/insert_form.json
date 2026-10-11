@@ -255,7 +255,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Insert Row",
+  "title": "Agregar rol",
   "topRow": 0,
   "type": "JSON_FORM_WIDGET",
   "version": 1,

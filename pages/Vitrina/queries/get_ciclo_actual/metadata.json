@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id \nFROM ciclos_compra \nWHERE estado = 'Abierto' \nLIMIT 1;",
+      "body": "SELECT id, fecha_cierre\nFROM ciclos_compra \nWHERE estado = 'Abierto' \nAND fecha_cierre > CURRENT_TIMESTAMP\nLIMIT 1;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

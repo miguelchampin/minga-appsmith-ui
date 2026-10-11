@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT DISTINCT\nclase\nFROM public.\"productos\" prd\nINNER JOIN public.\"producto_ciclo\" pc\non prd.id = pc.producto_id\nINNER JOIN public.ciclos_compra cic\nON pc.ciclo_id = cic.id\nWHERE cic.estado = 'Abierto'\n;",
+      "body": "SELECT DISTINCT\nclase\nFROM public.\"productos\" prd\nINNER JOIN public.\"producto_ciclo\" pc\non prd.id = pc.producto_id\nINNER JOIN public.ciclos_compra cic\nON pc.ciclo_id = cic.id\nWHERE cic.estado = 'Abierto'\nAND cic.fecha_cierre > CURRENT_TIMESTAMP\n;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

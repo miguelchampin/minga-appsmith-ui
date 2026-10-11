@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 63,
+  "bottomRow": 66,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
     "ARRAY": {
@@ -517,7 +517,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Update Row id: {{data_table.selectedRow.id}}",
+  "title": "Actualizar Producto {{data_table.selectedRow.producto_nombre}} del ciclo {{data_table.selectedRow.ciclo_nombre}}",
   "topRow": 0,
   "type": "JSON_FORM_WIDGET",
   "version": 1,

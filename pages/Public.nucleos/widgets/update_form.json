@@ -166,7 +166,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 86,
+  "originalBottomRow": 27,
   "originalTopRow": 0,
   "parentColumnSpace": 16.3125,
   "parentId": "0",
@@ -242,7 +242,7 @@
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
     "buttonVariant": "PRIMARY"
   },
-  "title": "Actualizar registro id: {{data_table.selectedRow.id}}",
+  "title": "Actualizar registro: {{data_table.selectedRow.nombre}}",
   "topRow": 0,
   "topRowBeforeCollapse": 0,
   "type": "JSON_FORM_WIDGET",
