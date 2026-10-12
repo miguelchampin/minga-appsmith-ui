@@ -1,4 +1,4 @@
-UPDATE public."producto_ciclo" SET
+UPDATE public."productos_ciclo" SET
 		"ciclo_id" = '{{update_form.fieldState.ciclo_id.isVisible ? update_form.formData.ciclo_id : update_form.sourceData.ciclo_id}}',
     "proveedor_id" = '{{update_form.fieldState.proveedor_id.isVisible ? update_form.formData.proveedor_id : update_form.sourceData.proveedor_id}}',
 		"producto_id" = '{{update_form.fieldState.producto_id.isVisible ? update_form.formData.producto_id : update_form.sourceData.producto_id}}',

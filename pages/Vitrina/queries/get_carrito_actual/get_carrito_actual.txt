@@ -6,13 +6,13 @@ SELECT
   ,(ped.cantidad_pedida * pc.precio_ciclo) AS subtotal
 	,p.url_imagen
 
-FROM pedido_detalle ped
+FROM pedidos_detalle ped
 
-JOIN pedido_cabecera pec
-ON ped.pedido_cabecera_id = pec.id
+JOIN pedidos_cabecera pec
+ON ped.pedidos_cabecera_id = pec.id
 
-JOIN producto_ciclo pc 
-ON ped.producto_ciclo_id = pc.id
+JOIN productos_ciclo pc 
+ON ped.productos_ciclo_id = pc.id
 
 JOIN productos p 
 ON pc.producto_id = p.id

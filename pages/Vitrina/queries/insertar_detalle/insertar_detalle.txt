@@ -1,2 +1,2 @@
-INSERT INTO pedido_detalle (pedido_cabecera_id, producto_ciclo_id, cantidad_pedida) 
+INSERT INTO pedidos_detalle (pedidos_cabecera_id, productos_ciclo_id, cantidad_pedida) 
 VALUES ({{this.params.cabecera_id}}, {{this.params.producto_ciclo_id}}, 1);

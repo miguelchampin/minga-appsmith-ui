@@ -1,0 +1,1 @@
+SELECT fn_ejecutar_cierre_ciclo({{get_cicloscompra.data[0].id}});

@@ -65,6 +65,14 @@
     {
       "id": "Comision_Cotizacion",
       "isDefault": false
+    },
+    {
+      "id": "Administracion",
+      "isDefault": false
+    },
+    {
+      "id": "Comision_Tesoreria",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

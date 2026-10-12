@@ -5,10 +5,10 @@ SELECT
     p.nombre AS producto,
     SUM(dp.cantidad_pedida) AS cantidad_total_solicitada
 		
-FROM pedido_detalle dp
+FROM pedidos_detalle dp
 
-JOIN producto_ciclo pc 
-ON dp.producto_ciclo_id = pc.id
+JOIN productos_ciclo pc 
+ON dp.productos_ciclo_id = pc.id
 
 JOIN productos p 
 ON pc.producto_id = p.id

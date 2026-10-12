@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\t\tc.nombre AS nombre_ciclo,\n\t\tc.estado AS estado_compra,\n    pr.nombre AS nombre_proveedor,\n    p.nombre AS producto,\n    SUM(dp.cantidad_pedida) AS cantidad_total_solicitada\n\t\t\nFROM pedido_detalle dp\n\nJOIN producto_ciclo pc \nON dp.producto_ciclo_id = pc.id\n\nJOIN productos p \nON pc.producto_id = p.id\n\nJOIN proveedores pr \nON p.proveedor_id = pr.id\n\nJOIN (\n\tSELECT *\n\tFROM ciclos_compra\n\tWHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)\n) c \nON pc.ciclo_id = c.id\n\n\nGROUP BY c.nombre, c.estado, pr.nombre, p.nombre\nORDER BY pr.nombre;",
+      "body": "SELECT \n\t\tc.nombre AS nombre_ciclo,\n\t\tc.estado AS estado_compra,\n    pr.nombre AS nombre_proveedor,\n    p.nombre AS producto,\n    SUM(dp.cantidad_pedida) AS cantidad_total_solicitada\n\t\t\nFROM pedidos_detalle dp\n\nJOIN productos_ciclo pc \nON dp.productos_ciclo_id = pc.id\n\nJOIN productos p \nON pc.producto_id = p.id\n\nJOIN proveedores pr \nON p.proveedor_id = pr.id\n\nJOIN (\n\tSELECT *\n\tFROM ciclos_compra\n\tWHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)\n) c \nON pc.ciclo_id = c.id\n\n\nGROUP BY c.nombre, c.estado, pr.nombre, p.nombre\nORDER BY pr.nombre;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -25,7 +25,7 @@
     "dynamicBindingPathList": [],
     "name": "get_detalle_proveedor",
     "pageId": "Comision_Cotizacion",
-    "runBehaviour": "AUTOMATIC",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

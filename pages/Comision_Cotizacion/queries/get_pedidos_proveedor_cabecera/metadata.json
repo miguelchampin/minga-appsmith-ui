@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    pc.id AS pedido_id,\n    p.nombre AS proveedor,\n    pc.fecha_pedido,\n    pc.estado,\n    pc.observaciones\nFROM pedidos_proveedores_cabecera pc\nJOIN proveedores p ON pc.proveedor_id = p.id\nWHERE pc.ciclo_id = {{appsmith.store.ciclo_actual_id}} -- Asumiendo que guardas el ciclo activo\nORDER BY p.nombre;",
+      "body": "SELECT \n    pc.id AS pedido_id,\n    p.nombre AS proveedor,\n    pc.fecha_pedido,\n    pc.estado,\n    pc.observaciones\nFROM pedidos_proveedores_cabecera pc\n\nJOIN proveedores p \nON pc.proveedor_id = p.id\n\nJOIN(\n\tSELECT *\n\tFROM ciclos_compra\n\tWHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)\n)c\non pc.ciclo_id = c.id\n\nORDER BY p.nombre;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -22,14 +22,10 @@
       "name": "La_Minga_DB",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "name": "get_pedidos_proveedor_cabecera",
     "pageId": "Comision_Cotizacion",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

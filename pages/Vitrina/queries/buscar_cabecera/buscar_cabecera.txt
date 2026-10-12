@@ -1,5 +1,5 @@
 SELECT id 
-FROM pedido_cabecera 
+FROM pedidos_cabecera 
 WHERE socio_id = {{appsmith.store.socio_id}} 
   AND ciclo_id = {{appsmith.store.ciclo_id}} 
   AND estado = 'Abierto' 

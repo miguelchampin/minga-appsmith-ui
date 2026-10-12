@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "INSERT INTO public.\"proveedores\" (\n\t\"nombre\",\n\t\"contacto\",\n\t\"email\",\n\t\"telefono\",\n\t\"cuenta_bancaria\")\nVALUES (\n\t'{{insert_form.formData.nombre}}',\n\t'{{insert_form.formData.contacto}}',\n\t'{{insert_form.formData.email}}',\n\t'{{insert_form.formData.telefono}}',\n\t'{{insert_form.formData.cuenta_bancaria}}');",
+      "body": "INSERT INTO public.\"proveedores\" (\n\t\"nombre\",\n\t\"contacto\",\n\t\"email\",\n\t\"telefono\",\n\t\"banco\",\n\t\"numero_cuenta\")\nVALUES (\n\t'{{insert_form.formData.nombre}}',\n\t'{{insert_form.formData.contacto}}',\n\t'{{insert_form.formData.email}}',\n\t'{{insert_form.formData.telefono}}',\n\t'{{insert_form.formData.banco}}',\n  '{{insert_form.formData.numero_cuenta}}');",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

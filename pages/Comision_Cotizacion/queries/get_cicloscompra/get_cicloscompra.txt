@@ -1,0 +1,8 @@
+SELECT 
+id,
+nombre,
+fecha_apertura,
+fecha_cierre,
+estado
+FROM public."ciclos_compra" 
+where fecha_apertura in (select max(fecha_apertura) from public."ciclos_compra");

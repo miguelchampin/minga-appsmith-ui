@@ -1,4 +1,4 @@
-INSERT INTO public."producto_ciclo" (
+INSERT INTO public."productos_ciclo" (
 	"ciclo_id",
 	"proveedor_id",
 	"producto_id",

@@ -2,7 +2,7 @@ SELECT PRDCLC.*
 ,CLC.nombre as ciclo_nombre
 ,PRV.nombre as proveedor_nombre
 ,PRD.nombre as producto_nombre
-FROM public."producto_ciclo"  PRDCLC
+FROM public."productos_ciclo"  PRDCLC
 
 INNER JOIN public.ciclos_compra CLC
 ON PRDCLC.ciclo_id = CLC.id

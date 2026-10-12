@@ -1,2 +1,2 @@
-DELETE FROM public."producto_ciclo"
+DELETE FROM public."productos_ciclo"
   WHERE "id" = {{data_table.triggeredRow.id}};

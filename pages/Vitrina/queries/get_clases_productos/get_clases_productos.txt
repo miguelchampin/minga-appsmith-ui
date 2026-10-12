@@ -1,7 +1,7 @@
 SELECT DISTINCT
 clase
 FROM public."productos" prd
-INNER JOIN public."producto_ciclo" pc
+INNER JOIN public."productos_ciclo" pc
 on prd.id = pc.producto_id
 INNER JOIN public.ciclos_compra cic
 ON pc.ciclo_id = cic.id

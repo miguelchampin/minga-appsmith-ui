@@ -5,6 +5,15 @@ SELECT
     pc.estado,
     pc.observaciones
 FROM pedidos_proveedores_cabecera pc
-JOIN proveedores p ON pc.proveedor_id = p.id
-WHERE pc.ciclo_id = {{appsmith.store.ciclo_actual_id}} -- Asumiendo que guardas el ciclo activo
+
+JOIN proveedores p 
+ON pc.proveedor_id = p.id
+
+JOIN(
+	SELECT *
+	FROM ciclos_compra
+	WHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)
+)c
+on pc.ciclo_id = c.id
+
 ORDER BY p.nombre;

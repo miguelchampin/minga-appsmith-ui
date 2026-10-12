@@ -1,2 +1,2 @@
 SELECT id as value, nombre as label
-FROM public.proveedores
+FROM public.proveedores;

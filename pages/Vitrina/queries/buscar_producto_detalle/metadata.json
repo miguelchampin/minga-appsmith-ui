@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \nid\n,cantidad_pedida\nFROM pedido_detalle \nWHERE pedido_cabecera_id = {{this.params.cabecera_id}} \nAND producto_ciclo_id = {{this.params.producto_ciclo_id}};\n",
+      "body": "SELECT \nid\n,cantidad_pedida\nFROM pedidos_detalle \nWHERE pedidos_cabecera_id = {{this.params.cabecera_id}} \nAND productos_ciclo_id = {{this.params.producto_ciclo_id}};\n",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

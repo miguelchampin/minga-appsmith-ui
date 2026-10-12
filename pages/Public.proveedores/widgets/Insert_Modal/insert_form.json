@@ -3,7 +3,7 @@
   "autoGenerateForm": true,
   "backgroundColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 56,
+  "bottomRow": 63,
   "boxShadow": "none",
   "childStylesheet": {
     "ARRAY": {
@@ -146,13 +146,22 @@
       "key": "schema.__root_schema__.children.telefono.accentColor"
     },
     {
-      "key": "schema.__root_schema__.children.cuenta_bancaria.defaultValue"
+      "key": "schema.__root_schema__.children.banco.defaultValue"
     },
     {
-      "key": "schema.__root_schema__.children.cuenta_bancaria.borderRadius"
+      "key": "schema.__root_schema__.children.banco.borderRadius"
     },
     {
-      "key": "schema.__root_schema__.children.cuenta_bancaria.accentColor"
+      "key": "schema.__root_schema__.children.banco.accentColor"
+    },
+    {
+      "key": "schema.__root_schema__.children.numero_cuenta.defaultValue"
+    },
+    {
+      "key": "schema.__root_schema__.children.numero_cuenta.borderRadius"
+    },
+    {
+      "key": "schema.__root_schema__.children.numero_cuenta.accentColor"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -181,7 +190,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{InsertQuery.run(\n\t() => SelectQuery.run()\n\t\t\t\t\t.then(() => closeModal('Insert_Modal')), \n\t(error) => showAlert(`Error while inserting resource!\\n ${error}`,'error'))\n}}",
-  "originalBottomRow": 56,
+  "originalBottomRow": 78,
   "originalTopRow": 0,
   "parentColumnSpace": 8.125,
   "parentId": "9rhv3ioohq",
@@ -203,6 +212,28 @@
       "cellBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
       "cellBoxShadow": "none",
       "children": {
+        "banco": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "accessor": "banco",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.banco))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "banco",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Banco",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "banco",
+          "position": 4,
+          "sourceData": null
+        },
         "contacto": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
           "accessor": "contacto",
@@ -223,27 +254,6 @@
           "labelTextSize": "0.875rem",
           "originalIdentifier": "contacto",
           "position": 1
-        },
-        "cuenta_bancaria": {
-          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "accessor": "cuenta_bancaria",
-          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "boxShadow": "none",
-          "children": {},
-          "dataType": "null",
-          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.cuenta_bancaria))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
-          "fieldType": "Text Input",
-          "iconAlign": "left",
-          "identifier": "cuenta_bancaria",
-          "isCustomField": false,
-          "isDisabled": false,
-          "isRequired": false,
-          "isSpellCheck": false,
-          "isVisible": true,
-          "label": "Cuenta Bancaria",
-          "labelTextSize": "0.875rem",
-          "originalIdentifier": "cuenta_bancaria",
-          "position": 4
         },
         "email": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
@@ -287,6 +297,28 @@
           "originalIdentifier": "nombre",
           "position": 0,
           "sourceData": "proveedor1"
+        },
+        "numero_cuenta": {
+          "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "accessor": "numero_cuenta",
+          "borderRadius": "{{((sourceData, formData, fieldState) => ((appsmith.theme.borderRadius.appBorderRadius)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "boxShadow": "none",
+          "children": {},
+          "dataType": "null",
+          "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.numero_cuenta))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",
+          "fieldType": "Text Input",
+          "iconAlign": "left",
+          "identifier": "numero_cuenta",
+          "isCustomField": false,
+          "isDisabled": false,
+          "isRequired": false,
+          "isSpellCheck": false,
+          "isVisible": true,
+          "label": "Numero Cuenta",
+          "labelTextSize": "0.875rem",
+          "originalIdentifier": "numero_cuenta",
+          "position": 5,
+          "sourceData": null
         },
         "telefono": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(insert_form.sourceData, insert_form.formData, insert_form.fieldState)}}",

@@ -3,5 +3,6 @@ UPDATE public."proveedores" SET
 		"contacto" = '{{update_form.fieldState.contacto.isVisible ? update_form.formData.contacto : update_form.sourceData.contacto}}',
     "email" = '{{update_form.fieldState.email.isVisible ? update_form.formData.email : update_form.sourceData.email}}',
 		"telefono" = '{{update_form.fieldState.telefono.isVisible ? update_form.formData.telefono : update_form.sourceData.telefono}}',
-		"cuenta_bancaria" = '{{update_form.fieldState.cuenta_bancaria.isVisible ? update_form.formData.cuenta_bancaria : update_form.sourceData.cuenta_bancaria}}'
+		"banco" = '{{update_form.fieldState.telefono.isVisible ? update_form.formData.banco : update_form.sourceData.banco}}',
+		"numero_cuenta" = '{{update_form.fieldState.numero_cuenta.isVisible ? update_form.formData.numero_cuenta : update_form.sourceData.numero_cuenta}}'
 WHERE "id" = {{data_table.selectedRow.id}};

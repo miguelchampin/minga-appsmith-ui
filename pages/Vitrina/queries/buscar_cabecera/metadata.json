@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT id \nFROM pedido_cabecera \nWHERE socio_id = {{appsmith.store.socio_id}} \n  AND ciclo_id = {{appsmith.store.ciclo_id}} \n  AND estado = 'Abierto' \nLIMIT 1;",
+      "body": "SELECT id \nFROM pedidos_cabecera \nWHERE socio_id = {{appsmith.store.socio_id}} \n  AND ciclo_id = {{appsmith.store.ciclo_id}} \n  AND estado = 'Abierto' \nLIMIT 1;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

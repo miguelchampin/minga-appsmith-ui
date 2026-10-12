@@ -13,7 +13,7 @@ SELECT
 		,p.es_mas_barato
 		,p.es_vegano
 		,p.es_sin_gluten
-FROM producto_ciclo pc
+FROM productos_ciclo pc
 
 JOIN productos p 
 ON pc.producto_id = p.id
