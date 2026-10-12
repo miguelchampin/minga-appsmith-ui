@@ -1,0 +1,28 @@
+SELECT 
+		c.nombre AS nombre_ciclo,
+		c.estado AS estado_compra,
+    pr.nombre AS nombre_proveedor,
+    p.nombre AS producto,
+    SUM(dp.cantidad_pedida) AS cantidad_total_solicitada
+		
+FROM pedido_detalle dp
+
+JOIN producto_ciclo pc 
+ON dp.producto_ciclo_id = pc.id
+
+JOIN productos p 
+ON pc.producto_id = p.id
+
+JOIN proveedores pr 
+ON p.proveedor_id = pr.id
+
+JOIN (
+	SELECT *
+	FROM ciclos_compra
+	WHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)
+) c 
+ON pc.ciclo_id = c.id
+
+
+GROUP BY c.nombre, c.estado, pr.nombre, p.nombre
+ORDER BY pr.nombre;

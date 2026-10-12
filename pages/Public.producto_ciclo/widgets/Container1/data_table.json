@@ -40,6 +40,11 @@
     "task": 245
   },
   "columnUpdatedAt": 1788704861161,
+  "columnWidthMap": {
+    "excedentes_disponibles_ciclo": 117,
+    "precio_ciclo": 127,
+    "stock_proveedor": 113
+  },
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": "0",
   "delimiter": ",",

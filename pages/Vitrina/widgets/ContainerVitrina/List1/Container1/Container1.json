@@ -1,5 +1,5 @@
 {
-  "animateLoading": true,
+  "animateLoading": false,
   "backgroundColor": "white",
   "borderColor": "#E0DEDE",
   "borderRadius": "0.375rem",
@@ -78,7 +78,7 @@
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "shouldScrollContents": true,
+  "shouldScrollContents": false,
   "topRow": 0,
   "type": "CONTAINER_WIDGET",
   "version": 1,

@@ -1,5 +1,8 @@
 {
   "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
   "applicationDetail": {
     "navigationSetting": {
       "colorStyle": "light",
@@ -58,8 +61,15 @@
     {
       "id": "AccesoDenegado",
       "isDefault": false
+    },
+    {
+      "id": "Comision_Cotizacion",
+      "isDefault": false
     }
   ],
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
   "unpublishedApplicationDetail": {
     "navigationSetting": {
       "colorStyle": "light",
