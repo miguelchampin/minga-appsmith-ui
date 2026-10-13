@@ -1,0 +1,21 @@
+SELECT 
+    m.id AS movimiento_id,
+    p.nombre AS proveedor,
+    p.banco,
+    p.numero_cuenta,
+    m.monto,
+    m.estado
+FROM movimientos_cuenta_proveedores m
+JOIN proveedores p
+ON m.proveedor_id = p.id
+
+JOIN(
+	SELECT *
+	FROM ciclos_compra
+	WHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)
+)c
+on m.ciclo_id = c.id
+
+WHERE m.tipo_movimiento = 'compra'
+
+ORDER BY p.nombre;

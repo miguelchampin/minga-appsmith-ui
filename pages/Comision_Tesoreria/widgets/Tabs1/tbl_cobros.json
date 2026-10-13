@@ -1,0 +1,385 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 49,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "cachedTableData": {},
+  "canFreezeColumn": true,
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "movimiento_id",
+    "socio",
+    "nucleo",
+    "monto",
+    "estado",
+    "comprobante_url",
+    "EditActions1"
+  ],
+  "columnUpdatedAt": 1791864429950,
+  "columnWidthMap": {},
+  "customIsLoading": false,
+  "customIsLoadingValue": "",
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": 0,
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.movimiento_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.socio.computedValue"
+    },
+    {
+      "key": "primaryColumns.nucleo.computedValue"
+    },
+    {
+      "key": "primaryColumns.monto.computedValue"
+    },
+    {
+      "key": "primaryColumns.estado.computedValue"
+    },
+    {
+      "key": "primaryColumns.comprobante_url.computedValue"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.estado.onSubmit"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "endOfData": false,
+  "flexVerticalAlignment": "start",
+  "horizontalAlignment": "LEFT",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": false,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "l9jln6vzft",
+  "label": "Data",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 32,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 35,
+  "mobileTopRow": 4,
+  "needsErrorInfo": false,
+  "originalBottomRow": 55,
+  "originalTopRow": 20,
+  "parentColumnSpace": 15.171875,
+  "parentId": "y4sqbeoo4e",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "EditActions1": {
+      "alias": "EditActions1",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "editActions",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "discardActionLabel": "Discard",
+      "discardBorderRadius": "{{tbl_cobros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "discardButtonColor": "#F22B2B",
+      "discardButtonVariant": "TERTIARY",
+      "discardIconAlign": "left",
+      "enableFilter": true,
+      "enableSort": true,
+      "id": "EditActions1",
+      "index": 6,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardDisabled": "{{tbl_cobros.processedTableData.map((currentRow, currentIndex) => ( !tbl_cobros.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveDisabled": "{{tbl_cobros.processedTableData.map((currentRow, currentIndex) => ( !tbl_cobros.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Save / Discard",
+      "notation": "standard",
+      "originalId": "EditActions1",
+      "saveActionLabel": "Save",
+      "saveBorderRadius": "{{tbl_cobros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "saveButtonColor": "{{tbl_cobros.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveIconAlign": "left",
+      "sticky": "right",
+      "thousandSeparator": true,
+      "validation": {},
+      "width": 150
+    },
+    "comprobante_url": {
+      "alias": "comprobante_url",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_cobros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"comprobante_url\"])) : comprobante_url })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "comprobante_url",
+      "index": 5,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "comprobante_url",
+      "notation": "standard",
+      "originalId": "comprobante_url",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "estado": {
+      "alias": "estado",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_cobros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"estado\"])) : estado })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "estado",
+      "index": 4,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "estado",
+      "notation": "standard",
+      "onSubmit": "{{update_pago_socio.run().then(() => {\n  showAlert('Registro actualizado con exito', 'success');\n  get_cobros_socios.run();\n});}}",
+      "originalId": "estado",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "monto": {
+      "alias": "monto",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = tbl_cobros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"monto\"])) : monto })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "monto",
+      "index": 3,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "monto",
+      "notation": "standard",
+      "originalId": "monto",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "movimiento_id": {
+      "alias": "movimiento_id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = tbl_cobros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"movimiento_id\"])) : movimiento_id })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "movimiento_id",
+      "index": 0,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "movimiento_id",
+      "notation": "standard",
+      "originalId": "movimiento_id",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "nucleo": {
+      "alias": "nucleo",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_cobros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"nucleo\"])) : nucleo })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "nucleo",
+      "index": 2,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "nucleo",
+      "notation": "standard",
+      "originalId": "nucleo",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "socio": {
+      "alias": "socio",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = tbl_cobros.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"socio\"])) : socio })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "socio",
+      "index": 1,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "nombre",
+      "notation": "standard",
+      "originalId": "socio",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchKey": "",
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{get_cobros_socios.data}}",
+  "textSize": "0.875rem",
+  "topRow": 2,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "oow0p6qyyg",
+  "widgetName": "tbl_cobros"
+}

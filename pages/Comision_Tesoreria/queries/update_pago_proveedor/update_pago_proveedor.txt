@@ -1,0 +1,6 @@
+UPDATE movimientos_cuenta_proveedores 
+SET 
+    estado = 'Pagado',
+    tesorero_validador_id = {{appsmith.store.usuario_actual_id}},
+    fecha_registro = CURRENT_TIMESTAMP
+WHERE id = {{tbl_pagos_prov.triggeredRow.movimiento_id}};
