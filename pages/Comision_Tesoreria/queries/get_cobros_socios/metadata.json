@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    m.id AS movimiento_id,\n    s.nombre AS socio,\n    n.nombre AS nucleo,\n    m.monto,\n    m.estado,\n    m.comprobante_url\nFROM movimientos_cuenta_socios m\n\nJOIN(\n\tSELECT *\n\tFROM ciclos_compra\n\tWHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)\n)c\non m.ciclo_id = c.id\n\nJOIN socios s \nON m.socio_id = s.id\n\nLEFT JOIN nucleos n \nON s.nucleo_id = n.id\n\nWHERE m.tipo_movimiento = 'compra'\nORDER BY n.nombre, s.nombre;",
+      "body": "SELECT \n    s.id AS socio_id,\n    s.nombre,\n    v.saldo_actual \nFROM socios s\nJOIN (\n\tSELECT \n    socio_id,\n    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE 0 END) AS total_abonos,\n    SUM(CASE WHEN tipo_movimiento = 'cargo' THEN monto ELSE 0 END) AS total_cargos,\n    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE -monto END) AS saldo_actual\n\tFROM movimientos_cuenta_socios\n\tGROUP BY socio_id\n) v \nON s.id = v.socio_id\nWHERE v.saldo_actual < 0;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

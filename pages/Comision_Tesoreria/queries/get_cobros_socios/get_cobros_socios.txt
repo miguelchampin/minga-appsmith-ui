@@ -1,24 +1,16 @@
 SELECT 
-    m.id AS movimiento_id,
-    s.nombre AS socio,
-    n.nombre AS nucleo,
-    m.monto,
-    m.estado,
-    m.comprobante_url
-FROM movimientos_cuenta_socios m
-
-JOIN(
-	SELECT *
-	FROM ciclos_compra
-	WHERE fecha_apertura in (select max(fecha_apertura) from ciclos_compra)
-)c
-on m.ciclo_id = c.id
-
-JOIN socios s 
-ON m.socio_id = s.id
-
-LEFT JOIN nucleos n 
-ON s.nucleo_id = n.id
-
-WHERE m.tipo_movimiento = 'compra'
-ORDER BY n.nombre, s.nombre;
+    s.id AS socio_id,
+    s.nombre,
+    v.saldo_actual 
+FROM socios s
+JOIN (
+	SELECT 
+    socio_id,
+    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE 0 END) AS total_abonos,
+    SUM(CASE WHEN tipo_movimiento = 'cargo' THEN monto ELSE 0 END) AS total_cargos,
+    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE -monto END) AS saldo_actual
+	FROM movimientos_cuenta_socios
+	GROUP BY socio_id
+) v 
+ON s.id = v.socio_id
+WHERE v.saldo_actual < 0;
