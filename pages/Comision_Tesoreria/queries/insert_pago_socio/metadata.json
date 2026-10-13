@@ -1,11 +1,11 @@
 {
   "gitSyncId": "6a89d2d2381db089d174062f_b6aad99c-eea1-4db5-a63d-f95d9c2a81de",
-  "id": "Comision_Tesoreria_update_pago_socio",
+  "id": "Comision_Tesoreria_insert_pago_socio",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "UPDATE movimientos_cuenta_socios \nSET \n    estado = {{tbl_cobros.updatedRow.estado}}, \n    comprobante_url = {{tbl_cobros.updatedRow.comprobante_url}},\n    tesorero_validador_id = {{appsmith.store.usuario_actual_id}}\nWHERE id = {{tbl_cobros.updatedRow.movimiento_id}};",
+      "body": "INSERT INTO movimientos_cuenta_socios (\n    socio_id, \n    ciclo_id, \n    tesorero_validador_id, \n    tipo_movimiento, \n    monto, \n    descripcion, \n    comprobante_url, \n    estado\n) VALUES (\n    {{tbl_cobros.selectedRow.socio_id}}, \n    {{appsmith.store.ciclo_actual_id}}, \n    {{appsmith.store.usuario_actual_id}}, \n    'abono', \n    {{Input_monto.text}}, \n    'Transferencia bancaria validada', \n    'http://seaweedfs:8888/buckets/comprobantes/{{subeComprobante.files[0].name}}', \n    'Aprobado'\n);",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -27,7 +27,7 @@
         "key": "body"
       }
     ],
-    "name": "update_pago_socio",
+    "name": "insert_pago_socio",
     "pageId": "Comision_Tesoreria",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

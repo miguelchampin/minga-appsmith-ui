@@ -1,6 +1,0 @@
-UPDATE movimientos_cuenta_socios 
-SET 
-    estado = {{tbl_cobros.updatedRow.estado}}, 
-    comprobante_url = {{tbl_cobros.updatedRow.comprobante_url}},
-    tesorero_validador_id = {{appsmith.store.usuario_actual_id}}
-WHERE id = {{tbl_cobros.updatedRow.movimiento_id}};

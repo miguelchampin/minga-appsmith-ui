@@ -1,0 +1,19 @@
+INSERT INTO movimientos_cuenta_socios (
+    socio_id, 
+    ciclo_id, 
+    tesorero_validador_id, 
+    tipo_movimiento, 
+    monto, 
+    descripcion, 
+    comprobante_url, 
+    estado
+) VALUES (
+    {{tbl_cobros.selectedRow.socio_id}}, 
+    {{appsmith.store.ciclo_actual_id}}, 
+    {{appsmith.store.usuario_actual_id}}, 
+    'abono', 
+    {{Input_monto.text}}, 
+    'Transferencia bancaria validada', 
+    'http://seaweedfs:8888/buckets/comprobantes/{{subeComprobante.files[0].name}}', 
+    'Aprobado'
+);
