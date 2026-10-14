@@ -27,11 +27,15 @@
   "icon": "plant",
   "pages": [
     {
-      "id": "Public.socios",
-      "isDefault": true
+      "id": "Public.roles",
+      "isDefault": false
     },
     {
       "id": "Public.nucleos",
+      "isDefault": false
+    },
+    {
+      "id": "Public.socios",
       "isDefault": false
     },
     {
@@ -43,11 +47,7 @@
       "isDefault": false
     },
     {
-      "id": "Public.roles",
-      "isDefault": false
-    },
-    {
-      "id": "Vitrina",
+      "id": "Public.ciclos_compra",
       "isDefault": false
     },
     {
@@ -55,19 +55,15 @@
       "isDefault": false
     },
     {
-      "id": "Public.ciclos_compra",
-      "isDefault": false
+      "id": "Vitrina",
+      "isDefault": true
     },
     {
-      "id": "AccesoDenegado",
+      "id": "Administracion",
       "isDefault": false
     },
     {
       "id": "Comision_Cotizacion",
-      "isDefault": false
-    },
-    {
-      "id": "Administracion",
       "isDefault": false
     },
     {
@@ -76,6 +72,10 @@
     },
     {
       "id": "Public.movimientos_cuenta_socios",
+      "isDefault": false
+    },
+    {
+      "id": "AccesoDenegado",
       "isDefault": false
     }
   ],
