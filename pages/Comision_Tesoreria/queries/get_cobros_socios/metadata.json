@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    s.id AS socio_id,\n    s.nombre,\n    v.saldo_actual \nFROM socios s\nJOIN (\n\tSELECT \n    socio_id,\n    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE 0 END) AS total_abonos,\n    SUM(CASE WHEN tipo_movimiento = 'cargo' THEN monto ELSE 0 END) AS total_cargos,\n    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE -monto END) AS saldo_actual\n\tFROM movimientos_cuenta_socios\n\tGROUP BY socio_id\n) v \nON s.id = v.socio_id\nWHERE v.saldo_actual < 0;",
+      "body": "SELECT mcs.* /*\n    s.id AS socio_id,\n    s.nombre,\n    SUM(CASE WHEN mcs.tipo_movimiento = 'abono' THEN mcs.monto ELSE 0 END) AS total_abonos,\n    SUM(CASE WHEN mcs.tipo_movimiento = 'cargo' THEN mcs.monto ELSE 0 END) AS total_cargos,\n    SUM(CASE WHEN mcs.tipo_movimiento = 'abono' THEN mcs.monto ELSE -mcs.monto END) AS saldo_actual\n\t\t*/\nFROM movimientos_cuenta_socios mcs\n\nINNER JOIN socios s\nON s.id = mcs.socio_id\n\t\t\t\nINNER JOIN ciclos_compra cc\nON mcs.ciclo_id = cc.id\n\t\n--GROUP BY s.id, s.nombre\n;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

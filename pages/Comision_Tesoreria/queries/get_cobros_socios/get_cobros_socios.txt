@@ -1,16 +1,17 @@
-SELECT 
+SELECT mcs.* /*
     s.id AS socio_id,
     s.nombre,
-    v.saldo_actual 
-FROM socios s
-JOIN (
-	SELECT 
-    socio_id,
-    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE 0 END) AS total_abonos,
-    SUM(CASE WHEN tipo_movimiento = 'cargo' THEN monto ELSE 0 END) AS total_cargos,
-    SUM(CASE WHEN tipo_movimiento = 'abono' THEN monto ELSE -monto END) AS saldo_actual
-	FROM movimientos_cuenta_socios
-	GROUP BY socio_id
-) v 
-ON s.id = v.socio_id
-WHERE v.saldo_actual < 0;
+    SUM(CASE WHEN mcs.tipo_movimiento = 'abono' THEN mcs.monto ELSE 0 END) AS total_abonos,
+    SUM(CASE WHEN mcs.tipo_movimiento = 'cargo' THEN mcs.monto ELSE 0 END) AS total_cargos,
+    SUM(CASE WHEN mcs.tipo_movimiento = 'abono' THEN mcs.monto ELSE -mcs.monto END) AS saldo_actual
+		*/
+FROM movimientos_cuenta_socios mcs
+
+INNER JOIN socios s
+ON s.id = mcs.socio_id
+			
+INNER JOIN ciclos_compra cc
+ON mcs.ciclo_id = cc.id
+	
+--GROUP BY s.id, s.nombre
+;

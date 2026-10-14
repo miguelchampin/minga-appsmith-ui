@@ -73,6 +73,10 @@
     {
       "id": "Comision_Tesoreria",
       "isDefault": false
+    },
+    {
+      "id": "Public.movimientos_cuenta_socios",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

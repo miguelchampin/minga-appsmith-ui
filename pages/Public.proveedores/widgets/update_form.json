@@ -5,7 +5,7 @@
   "borderColor": "#fff",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "0",
-  "bottomRow": 63,
+  "bottomRow": 66,
   "bottomRowBeforeCollapse": 86,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "childStylesheet": {
@@ -211,7 +211,7 @@
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "onSubmit": "{{UpdateQuery.run(() => SelectQuery.run(), (error) => showAlert(`Error while updating resource!\\n ${error}`,'error'))}}",
-  "originalBottomRow": 78,
+  "originalBottomRow": 63,
   "originalTopRow": 0,
   "parentColumnSpace": 16.3125,
   "parentId": "0",
@@ -252,8 +252,7 @@
           "label": "Banco",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "banco",
-          "position": 4,
-          "sourceData": null
+          "position": 4
         },
         "contacto": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -338,8 +337,7 @@
           "label": "Numero Cuenta",
           "labelTextSize": "0.875rem",
           "originalIdentifier": "numero_cuenta",
-          "position": 5,
-          "sourceData": null
+          "position": 5
         },
         "telefono": {
           "accentColor": "{{((sourceData, formData, fieldState) => ((appsmith.theme.colors.primaryColor)))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",

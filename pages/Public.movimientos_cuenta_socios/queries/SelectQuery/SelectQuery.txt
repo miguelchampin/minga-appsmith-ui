@@ -1,0 +1,16 @@
+SELECT 
+mcs.*
+,cc.nombre as ciclo_nombre
+,s.nombre as socio_nombre
+FROM public."movimientos_cuenta_socios" mcs
+
+INNER JOIN public.ciclos_compra cc
+ON mcs.ciclo_id = cc.id
+
+INNER JOIN public.socios s
+ON mcs.socio_id = s.id
+
+WHERE mcs."tipo_movimiento" ilike '%{{data_table.searchText || ""}}%'
+ORDER BY "{{data_table.sortOrder.column || 'id'}}" {{data_table.sortOrder.order || 'ASC'}}
+LIMIT {{data_table.pageSize}}
+OFFSET {{(data_table.pageNo - 1) * data_table.pageSize}};
