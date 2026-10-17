@@ -1,2 +1,0 @@
-DELETE FROM public."movimientos_cuenta_socios"
-  WHERE "id" = {{data_table.triggeredRow.id}};

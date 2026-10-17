@@ -1,2 +1,0 @@
-DELETE FROM public."nucleos"
-  WHERE "id" = {{data_table.triggeredRow.id}};

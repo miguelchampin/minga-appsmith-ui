@@ -1,2 +1,0 @@
-DELETE FROM public."ciclos_compra"
-  WHERE "id" = {{data_table.triggeredRow.id}};
