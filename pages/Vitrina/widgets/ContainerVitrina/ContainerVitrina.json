@@ -4,11 +4,11 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "1.5rem",
   "borderWidth": "1",
-  "bottomRow": 156,
+  "bottomRow": 154,
   "boxShadow": "NONE",
   "children": [
     {
-      "bottomRow": 1460,
+      "bottomRow": 1440,
       "canExtend": false,
       "containerStyle": "none",
       "detachFromLayout": true,
