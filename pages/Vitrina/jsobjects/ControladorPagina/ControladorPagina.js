@@ -7,7 +7,7 @@ export default {
 
     // Si no tiene permiso, lo enviamos fuera y detenemos el script
     if (!tienePermiso) {
-      //navigateTo('AccesoDenegado');
+      navigateTo('AccesoDenegado');
       return; 
     }
 
