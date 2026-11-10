@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignment": "left",
   "animateLoading": true,
-  "bottomRow": 12,
+  "bottomRow": 14,
   "defaultSelectedValues": "",
   "dynamicBindingPathList": [
     {
@@ -38,7 +38,7 @@
   "needsErrorInfo": false,
   "onSelectionChange": "{{get_vitrina_activa.run()}}",
   "options": "[\n{\"label\": \"Orgánico\", \"value\": \"organico\"}\n\n,{\"label\": \"Local\", \"value\": \"local\"}\n\n,{\"label\": \"Pequeña producción\", \"value\": \"pequena_produccion\"}\n\n,{\"label\": \"Más barato\", \"value\": \"mas_barato\"}\n\n,{\"label\": \"Vegano\", \"value\": \"vegano\"}\n\n,{\"label\": \"Sin Gluten\", \"value\": \"sin_gluten\"}\n]",
-  "originalBottomRow": 14,
+  "originalBottomRow": 12,
   "originalTopRow": 8,
   "parentColumnSpace": 9.881103515625,
   "parentId": "4ttazh7tar",
