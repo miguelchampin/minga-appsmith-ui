@@ -6,8 +6,9 @@ export default {
     try {
       let cabeceraId;
       const busqueda = await buscar_cabecera.run();
+			const ciclo_actual = await get_ciclo_actual.run();
       
-      if (busqueda && busqueda.length > 0) {
+      if (busqueda && busqueda.length > 0 && ciclo_actual && ciclo_actual.lenght > 0) {
         cabeceraId = busqueda[0].id;
       } else {
         const nuevaCabecera = await crear_cabecera.run();
