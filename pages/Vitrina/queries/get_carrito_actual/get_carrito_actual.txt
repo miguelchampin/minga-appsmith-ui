@@ -4,6 +4,7 @@ SELECT
   ,ped.cantidad_pedida
   ,pc.precio_ciclo
   ,(ped.cantidad_pedida * pc.precio_ciclo) AS subtotal
+	,ped.cantidad_pedida * pc.precio_ciclo * 0.05 * aplica_recargo::INT AS recargo
 	,p.url_imagen
 
 FROM pedidos_detalle ped

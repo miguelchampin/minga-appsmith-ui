@@ -1,0 +1,12 @@
+SELECT 
+    id,
+    ciclo_id,
+    tipo_movimiento AS tipo,
+    SUM(monto),
+    COALESCE(descripcion, 'Sin detalle') AS descripcion
+FROM movimientos_cuenta_socios
+WHERE socio_id = {{appsmith.store.socio_id}}
+  AND ciclo_id < {{appsmith.store.ciclo_id}}
+  AND estado != 'Anulado'
+GROUP BY ciclo_id, tipo_movimiento, 
+ORDER BY id ASC;
