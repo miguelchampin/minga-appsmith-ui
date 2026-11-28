@@ -24,16 +24,17 @@ UNION
 
 SELECT 
     0 as id,
-    mcs.ciclo_id,
-    mcs.tipo_movimiento AS tipo,
-    mcs.monto,
-    COALESCE(mcs.descripcion, 'Sin detalle') AS descripcion
+    MAX(mcs.ciclo_id) AS ciclo_id,
+    CASE WHEN SUM(CASE WHEN mcs.tipo_movimiento = 'abono' THEN 1 else -1 end * mcs.monto) > 0 THEN 'abono' ELSE 'cargo' END AS tipo,
+    ABS(SUM(CASE WHEN mcs.tipo_movimiento = 'abono' THEN 1 else -1 end * mcs.monto)) AS monto,
+    'Saldo pendiente' AS descripcion
 FROM movimientos_cuenta_socios mcs
 INNER JOIN ciclos_compra cc
 ON mcs.ciclo_id = cc.id
 LEFT JOIN ciclo_anterior ca
 ON ca.ciclo_id = cc.id
-WHERE cc.fecha_apertura > ca.fecha_apertura
+WHERE ca.ciclo_id IS NULL
+	AND cc.estado = 'finalizado'
 	AND mcs.socio_id = {{appsmith.store.socio_id}}
   AND mcs.estado != 'Anulado'
 	
