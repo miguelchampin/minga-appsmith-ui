@@ -2,9 +2,6 @@ SELECT DISTINCT
 clase
 FROM public."productos" prd
 INNER JOIN public."productos_ciclo" pc
-on prd.id = pc.producto_id
-INNER JOIN public.ciclos_compra cic
-ON pc.ciclo_id = cic.id
-WHERE cic.estado = 'Abierto'
-AND cic.fecha_cierre > CURRENT_TIMESTAMP
+ON prd.id = pc.producto_id
+WHERE pc.ciclo_id = {{appsmith.store.ciclo_id}}
 ;

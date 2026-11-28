@@ -1,12 +1,41 @@
+WITH ciclo_anterior AS (
+	SELECT
+	id as ciclo_id,
+	fecha_apertura
+	FROM ciclos_compra
+	WHERE estado = 'finalizado'
+	ORDER BY fecha_apertura DESC
+	LIMIT 1
+)
 SELECT 
-    id,
-    ciclo_id,
-    tipo_movimiento AS tipo,
-    SUM(monto),
-    COALESCE(descripcion, 'Sin detalle') AS descripcion
-FROM movimientos_cuenta_socios
-WHERE socio_id = {{appsmith.store.socio_id}}
-  AND ciclo_id < {{appsmith.store.ciclo_id}}
-  AND estado != 'Anulado'
-GROUP BY ciclo_id, tipo_movimiento, 
-ORDER BY id ASC;
+    mcs.id,
+    mcs.ciclo_id,
+    mcs.tipo_movimiento AS tipo,
+    mcs.monto,
+    COALESCE(mcs.descripcion, 'Sin detalle') AS descripcion
+FROM movimientos_cuenta_socios mcs
+INNER JOIN ciclo_anterior c
+ON mcs.ciclo_id = c.ciclo_id
+WHERE mcs.socio_id = {{appsmith.store.socio_id}}
+  AND mcs.estado != 'Anulado'
+
+
+UNION
+
+SELECT 
+    0 as id,
+    mcs.ciclo_id,
+    mcs.tipo_movimiento AS tipo,
+    mcs.monto,
+    COALESCE(mcs.descripcion, 'Sin detalle') AS descripcion
+FROM movimientos_cuenta_socios mcs
+INNER JOIN ciclos_compra cc
+ON mcs.ciclo_id = cc.id
+LEFT JOIN ciclo_anterior ca
+ON ca.ciclo_id = cc.id
+WHERE cc.fecha_apertura > ca.fecha_apertura
+	AND mcs.socio_id = {{appsmith.store.socio_id}}
+  AND mcs.estado != 'Anulado'
+	
+ORDER BY id ASC
+;

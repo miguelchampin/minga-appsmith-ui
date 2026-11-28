@@ -1,0 +1,44 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 4,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "TERTIARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "tooltip"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "iconName": "info-sign",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "5mi0bs43fw",
+  "leftColumn": 62,
+  "minWidth": 50,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 45,
+  "mobileRightColumn": 49,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 15.171875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "tooltip": "{{\n  (() => {\n    const movs = get_saldo_ciclos_anteriores.data || [];\n    if (movs.length === 0) return \"No tienes cargos ni abonos pendientes de ciclos anteriores.\";\n\n    return movs.map(m => {\n      const signo = m.tipo === 'cargo' ? '+' : '-';\n      const valor = Number(m.monto).toLocaleString('es-CL', { style: 'currency', currency: 'CLP' });\n      const etiqueta = m.tipo === 'cargo' ? 'Cargo' : 'Abono';\n      return `• ${etiqueta} (${signo}${valor}): ${m.descripcion}`;\n    }).join('\\n');\n  })()\n}}",
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "2v1bglqcx1",
+  "widgetName": "IconButton3"
+}

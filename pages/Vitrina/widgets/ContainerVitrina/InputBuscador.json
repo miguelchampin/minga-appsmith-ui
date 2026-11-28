@@ -43,6 +43,8 @@
   "mobileTopRow": 3,
   "needsErrorInfo": false,
   "onTextChanged": "{{get_vitrina_activa.run()}}",
+  "originalBottomRow": 8,
+  "originalTopRow": 4,
   "parentColumnSpace": 15.171875,
   "parentId": "4ttazh7tar",
   "parentRowSpace": 10,

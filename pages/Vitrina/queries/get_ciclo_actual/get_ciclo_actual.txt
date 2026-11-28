@@ -1,5 +1,4 @@
 SELECT id, fecha_cierre
 FROM ciclos_compra 
-WHERE estado = 'Abierto' 
-AND fecha_cierre > CURRENT_TIMESTAMP
+WHERE estado = 'compra'
 LIMIT 1;

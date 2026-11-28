@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n    id,\n    ciclo_id,\n    tipo_movimiento AS tipo,\n    SUM(monto),\n    COALESCE(descripcion, 'Sin detalle') AS descripcion\nFROM movimientos_cuenta_socios\nWHERE socio_id = {{appsmith.store.socio_id}}\n  AND ciclo_id < {{appsmith.store.ciclo_id}}\n  AND estado != 'Anulado'\nGROUP BY ciclo_id, tipo_movimiento, \nORDER BY id ASC;",
+      "body": "WITH ciclo_anterior AS (\n\tSELECT\n\tid as ciclo_id,\n\tfecha_apertura\n\tFROM ciclos_compra\n\tWHERE estado = 'finalizado'\n\tORDER BY fecha_apertura DESC\n\tLIMIT 1\n)\nSELECT \n    mcs.id,\n    mcs.ciclo_id,\n    mcs.tipo_movimiento AS tipo,\n    mcs.monto,\n    COALESCE(mcs.descripcion, 'Sin detalle') AS descripcion\nFROM movimientos_cuenta_socios mcs\nINNER JOIN ciclo_anterior c\nON mcs.ciclo_id = c.ciclo_id\nWHERE mcs.socio_id = {{appsmith.store.socio_id}}\n  AND mcs.estado != 'Anulado'\n\n\nUNION\n\nSELECT \n    0 as id,\n    mcs.ciclo_id,\n    mcs.tipo_movimiento AS tipo,\n    mcs.monto,\n    COALESCE(mcs.descripcion, 'Sin detalle') AS descripcion\nFROM movimientos_cuenta_socios mcs\nINNER JOIN ciclos_compra cc\nON mcs.ciclo_id = cc.id\nLEFT JOIN ciclo_anterior ca\nON ca.ciclo_id = cc.id\nWHERE cc.fecha_apertura > ca.fecha_apertura\n\tAND mcs.socio_id = {{appsmith.store.socio_id}}\n  AND mcs.estado != 'Anulado'\n\t\nORDER BY id ASC\n;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -29,7 +29,7 @@
     ],
     "name": "get_saldo_ciclos_anteriores",
     "pageId": "Vitrina",
-    "runBehaviour": "MANUAL",
+    "runBehaviour": "AUTOMATIC",
     "userSetOnLoad": false
   }
 }

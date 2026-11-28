@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 10,
+  "bottomRow": 12,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -19,7 +19,7 @@
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.25rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
@@ -33,8 +33,8 @@
   "mobileRightColumn": 62,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "originalBottomRow": 10,
-  "originalTopRow": 6,
+  "originalBottomRow": 12,
+  "originalTopRow": 8,
   "overflow": "NONE",
   "parentColumnSpace": 15.171875,
   "parentId": "0",
@@ -46,7 +46,7 @@
   "text": "Cargo 5%:  {{ \n  get_carrito_actual.data \n    ? get_carrito_actual.data.reduce((total, producto) => total + Number(producto.recargo), 0).toLocaleString('es-CL', { style: 'currency', currency: 'CLP' })\n    : \"$0\" \n}}",
   "textAlign": "RIGHT",
   "textColor": "#231F20",
-  "topRow": 6,
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
